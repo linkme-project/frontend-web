@@ -99,10 +99,7 @@ backend/gradle/wrapper/gradle-wrapper.jar
 
 ### STS ###
 backend/.apt_generated
-backend/.classpath
 backend/.factorypath
-backend/.project
-backend/.settings
 backend/.springBeans
 backend/.sts4-cache
 
