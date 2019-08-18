@@ -11,6 +11,7 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "material-design-icons-iconfont": "^5.0.1",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1",
     "vuetify": "^2.0.7"
@@ -54,7 +55,7 @@
     "node-notifier": "^5.1.2",
     "optimize-css-assets-webpack-plugin": "^3.2.0",
     "ora": "^1.2.0",
-    "portfinder": "^1.0.13",
+    "portfinder": "^1.0.22",
     "postcss-import": "^11.0.0",
     "postcss-loader": "^2.0.8",
     "postcss-url": "^7.2.1",
