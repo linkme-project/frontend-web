@@ -1,13 +1,22 @@
 <template>
   <div id="app">
+    <custom-header />
     <img src="./assets/logo.png">
     <router-view/>
+    <custom-footer />
   </div>
 </template>
 
 <script>
+import footer from './components/Footer'
+import header from './components/Header'
+
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    'custom-footer': footer,
+    'custom-header': header
+  }
 }
 </script>
 
@@ -18,6 +27,5 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
