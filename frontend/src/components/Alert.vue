@@ -2,26 +2,22 @@
   <div>
     <v-alert
       v-model="alert"
-      border="left"
-      close-text="Close Alert"
-      color="deep-purple accent-4"
+      color="#000000"
       dark
-      dismissible
+      dense
     >
-      Aenean imperdiet. Quisque id odio. Cras dapibus. Pellentesque ut neque. Cras dapibus.
-
-      Vivamus consectetuer hendrerit lacus. Sed mollis, eros et ultrices tempus, mauris ipsum aliquam libero, non adipiscing dolor urna a orci. Sed mollis, eros et ultrices tempus, mauris ipsum aliquam libero, non adipiscing dolor urna a orci. Curabitur blandit mollis lacus. Curabitur ligula sapien, tincidunt non, euismod vitae, posuere imperdiet, leo.
+      <div>
+        <span style="color: #00c4c4; vertical-align: middle; font-size: 12px;">앱 신규 설치 후 회원 가입 시</span>
+        <span style="vertical-align: middle; font-size: 12px;">바로 쓸 수 있는 포인트 증정!</span>
+        <v-btn
+          small
+          icon
+          @click="alert = false"
+        >
+          <v-icon small>cancel</v-icon>
+        </v-btn>
+      </div>
     </v-alert>
-    <div class="text-center">
-      <v-btn
-        v-if="!alert"
-        color="deep-purple accent-4"
-        dark
-        @click="alert = true"
-      >
-        Reset
-      </v-btn>
-    </div>
   </div>
 </template>
 

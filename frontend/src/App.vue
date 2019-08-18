@@ -1,8 +1,7 @@
 <template>
   <div id="app">
-    <!--<custom-alert />-->
+    <custom-alert />
     <custom-header />
-    <img src="./assets/logo.png">
     <router-view/>
     <custom-footer />
     <custom-bottom-nav />
