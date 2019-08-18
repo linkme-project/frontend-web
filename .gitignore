@@ -92,6 +92,8 @@ frontend/.yarn-integrity
 
 #### backend ####
 
+backend/src/main/resources/static/
+
 backend/HELP.md
 backend/.gradle
 backend/build/
