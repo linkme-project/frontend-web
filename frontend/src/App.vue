@@ -2,8 +2,7 @@
   <div id="app">
     <custom-alert />
     <custom-header />
-    <router-view/>
-    <custom-footer />
+    <router-view />
     <custom-bottom-nav />
   </div>
 </template>
@@ -32,5 +31,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  font-family: Roboto,Noto Sans KR,-apple-system,Dotum,sans-serif;
 }
 </style>

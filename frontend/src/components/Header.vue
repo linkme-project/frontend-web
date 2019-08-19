@@ -5,8 +5,8 @@
     dense
     flat
   >
-    <div style="line-height: 48px;">
-      <strong style="vertical-align: middle; font-size: 20px;">LinkME</strong>
+    <div style="line-height: 48px; padding-top: 5px;">
+      <strong style="vertical-align: middle; font-size: 22px;">LinkME</strong>
     </div>
     <v-spacer></v-spacer>
 

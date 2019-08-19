@@ -5,6 +5,7 @@
       color="#000000"
       dark
       dense
+      style="margin-bottom: 0px;"
     >
       <div>
         <span style="color: #00c4c4; vertical-align: middle; font-size: 12px;">앱 신규 설치 후 회원 가입 시</span>

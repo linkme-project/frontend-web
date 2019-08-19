@@ -43,16 +43,22 @@
         </a>
       </li>
     </ul>
+    <custom-footer />
   </div>
 </template>
 
 <script>
+import footer from '../components/Footer'
+
 export default {
   data () {
     return {
       msg: 'Welcome to Your Vue.js App',
       list: []
     }
+  },
+  components: {
+    'custom-footer': footer
   }
 }
 </script>
