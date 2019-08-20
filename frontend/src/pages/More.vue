@@ -149,13 +149,19 @@
       </v-list>
     </div>
     <custom-footer />
+    <custom-bottom-nav />
   </div>
 </template>
 
 <script>
 import footer from '../components/FooterInMore'
+import bottomNavigation from '../components/BottomNavigation'
 
 export default {
+  components: {
+    'custom-bottom-nav': bottomNavigation,
+    'custom-footer': footer
+  },
   data: () => ({
     settings: [],
     items: [
@@ -166,10 +172,7 @@ export default {
         ]
       }
     ]
-  }),
-  components: {
-    'custom-footer': footer
-  }
+  })
 }
 </script>
 

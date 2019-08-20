@@ -1,0 +1,143 @@
+<template>
+    <div class="wrapper">
+      <div>
+        <h2 class="login-title">
+          로그인
+        </h2>
+        <v-text-field
+          class="login-form"
+          placeholder="이메일 아이디"
+          outlined
+          single-line
+          hide-details
+        ></v-text-field>
+        <v-text-field
+          class="login-form"
+          placeholder="비밀번호(영문, 숫자, 특수문자 포함 8자 이상)"
+          single-line
+          outlined
+          hide-details
+        ></v-text-field>
+        <div class="login-action">
+          test
+        </div>
+        <v-btn
+          color="#00c4c4"
+          dark
+          large
+          depressed
+          width="100%"
+          min-height="48px"
+          class="login-btn"
+        >
+          로그인
+        </v-btn>
+        <v-divider />
+        <div class="social-login">
+          <v-btn
+            color="#304d8a"
+            dark
+            large
+            depressed
+            width="100%"
+            min-height="48px"
+            class="facebook"
+          >
+            페이스북으로 로그인
+          </v-btn>
+          <v-btn
+            background-color="#fff"
+            outlined
+            width="100%"
+            min-height="48px"
+            class="social-btn"
+          >
+            카카오
+          </v-btn>
+          <v-btn
+            background-color="#fff"
+            outlined
+            width="100%"
+            min-height="48px"
+            class="social-btn"
+          >
+            네이버
+          </v-btn>
+          <v-btn
+            background-color="#fff"
+            outlined
+            width="100%"
+            min-height="48px"
+            class="social-btn"
+          >
+            구글
+          </v-btn>
+          <v-btn
+            background-color="#fff"
+            outlined
+            width="100%"
+            min-height="48px"
+            class="social-btn"
+          >
+            트위터
+          </v-btn>
+
+        </div>
+      </div>
+      <custom-footer />
+    </div>
+</template>
+
+<script>
+import footer from '../components/FooterInLogin'
+
+export default {
+  components: {
+    'custom-footer': footer
+  },
+  name: 'HelloWorld',
+  data () {
+    return {
+      msg: '테스트 페이지다 이 새끼야'
+    }
+  }
+}
+</script>
+
+<style scoped>
+.wrapper {
+  padding: 40px 16px;
+}
+.login-title {
+  font-size: 28px;
+  line-height: 36px;
+  letter-spacing: -.6px;
+  font-weight: 700;
+  text-align: start;
+  margin: 0 0 20px;
+}
+.login-form {
+  margin-bottom: 16px;
+}
+.login-action {
+  margin: 24px 0px 24px 0px;
+}
+.login-btn {
+  font-size: 16px;
+  margin: 16px 0px 16px 0px;
+}
+.social-login {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-row-gap: 12px;
+  grid-column-gap: 8px;
+}
+.social-btn {
+  border-color: rgba(0,0,0,.15);
+}
+.facebook {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  grid-column: 1/3;
+}
+</style>

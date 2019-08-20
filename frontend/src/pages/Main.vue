@@ -44,11 +44,13 @@
       </li>
     </ul>
     <custom-footer />
+    <custom-bottom-nav />
   </div>
 </template>
 
 <script>
-import footer from '../components/Footer'
+import footer from '../components/FooterInPage'
+import bottomNavigation from '../components/BottomNavigation'
 
 export default {
   data () {
@@ -58,6 +60,7 @@ export default {
     }
   },
   components: {
+    'custom-bottom-nav': bottomNavigation,
     'custom-footer': footer
   }
 }

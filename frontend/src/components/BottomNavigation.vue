@@ -18,7 +18,7 @@
       <v-icon>trending_up</v-icon>
     </v-btn>
 
-    <v-btn value="my" to="/my-info">
+    <v-btn value="my" to="/sign-in">
       <span style="font-size: 10px;">My</span>
       <v-icon>person</v-icon>
     </v-btn>
