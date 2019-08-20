@@ -4,6 +4,7 @@ import Main from '@/pages/Main'
 import SignIn from '@/pages/SignIn'
 import More from '@/pages/More'
 import LogIn from '@/pages/LogIn'
+import NotProvided from '@/pages/NotProvided'
 
 Vue.use(Router)
 
@@ -29,6 +30,11 @@ export default new Router({
       path: '/more',
       name: 'More',
       component: More
+    },
+    {
+      path: '/not-provided',
+      name: 'NotProvided',
+      component: NotProvided
     }
   ]
 })
