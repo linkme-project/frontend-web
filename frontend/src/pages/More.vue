@@ -6,7 +6,16 @@
       <p class="customer-support-text">링크미 대표 고객센터 1611-1321</p>
       <p class="customer-support-text">L9 멤버십 고객센터 1321-3291</p>
       <p class="customer-support-text">월~금 오전 9시 - 오후 6시 (영업일 기준)</p>
-      <v-btn color="#00c4c4" dark large depressed min-width="156px" height="36px" style="margin-top: 12px;">문의하기</v-btn>
+      <v-btn
+        color="#00c4c4"
+        dark
+        large
+        depressed
+        min-width="156px"
+        height="36px"
+        style="margin-top: 12px;"
+        to="/not-provided"
+      >문의하기</v-btn>
     </div>
     <div class="more-list">
       <v-list>
@@ -154,7 +163,7 @@
 </template>
 
 <script>
-import footer from '../components/FooterInMore'
+import footer from '../components/FooterInPage2'
 import bottomNavigation from '../components/BottomNavigation'
 
 export default {

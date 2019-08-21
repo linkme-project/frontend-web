@@ -7,7 +7,6 @@
     <v-btn
       value="home"
       to="/"
-      style="margin-left: 15px;"
     >
       <span style="font-size: 10px;">홈</span>
       <v-icon>home</v-icon>
@@ -31,7 +30,6 @@
     <v-btn
       value="more"
       to="/more"
-      style="margin-right: 15px;"
     >
       <span style="font-size: 10px;">더보기</span>
       <v-icon>more_horiz</v-icon>

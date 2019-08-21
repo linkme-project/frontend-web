@@ -18,8 +18,17 @@
           outlined
           hide-details
         ></v-text-field>
-        <div class="login-action">
-          test
+        <div style="position: relative">
+          <div class="login-action">
+            <div>
+              <input type="checkbox" style="vertical-align: middle; margin: 5px;"/>
+              <label style="vertical-align: middle;">아이디 저장</label>
+            </div>
+            <div>
+              <label style="vertical-align: middle;">아이디/비밀번호 찾기</label>
+              <v-icon style="vertical-align: middle;">keyboard_arrow_right</v-icon>
+            </div>
+          </div>
         </div>
         <v-btn
           color="#00c4c4"
@@ -32,7 +41,11 @@
         >
           로그인
         </v-btn>
-        <v-divider />
+        <div class="wrap">
+          <div class="line">
+            <div class="or">또는</div>
+          </div>
+        </div>
         <div class="social-login">
           <v-btn
             color="#304d8a"
@@ -84,7 +97,7 @@
 
         </div>
       </div>
-      <custom-footer />
+      <custom-footer msg="아직 링크미 계정이 없나요?" link="/sign-up" link-text="회원가입" />
     </div>
 </template>
 
@@ -119,9 +132,6 @@ export default {
 .login-form {
   margin-bottom: 16px;
 }
-.login-action {
-  margin: 24px 0px 24px 0px;
-}
 .login-btn {
   font-size: 16px;
   margin: 16px 0px 16px 0px;
@@ -139,5 +149,35 @@ export default {
   margin-top: 16px;
   margin-bottom: 16px;
   grid-column: 1/3;
+}
+.wrap {
+  position: relative;
+}
+.line {
+  padding: 0 10px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.wrap:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  border-top: 1px solid #eeeeee;
+  width: 100%;
+  transform: translateY(-50%);
+}
+.or {
+  background-color: #fff;
+  padding: 0px 12px;
+  font-size: 12px;
+}
+.login-action{
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  font-size: 13px;
+  height: 24px;
 }
 </style>

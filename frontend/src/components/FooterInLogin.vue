@@ -1,18 +1,17 @@
 <template>
   <div id="footer">
-    <p>
-      아직 링크미 계정이 없나요?&nbsp;&nbsp;
-      <a href="#">회원가입</a>
-    </p>
+    <div style="width: 100%;">
+      {{ msg }}&nbsp;&nbsp;
+      <router-link :to="link">{{ linkText }}</router-link>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
+  props: ['msg', 'link', 'linkText'],
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App',
-      list: []
     }
   }
 }
@@ -24,11 +23,8 @@ export default {
   bottom: 0;
   left: 0;
   line-height: 56px;
-  display: flex;
   width: 100%;
   border-top: 1px solid #eeeeee;
-  background-color: #fff;
-  text-align: center;
   font-size: 13px;
 }
 a {
