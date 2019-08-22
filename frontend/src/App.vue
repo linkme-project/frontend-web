@@ -30,4 +30,11 @@ export default {
   color: #2c3e50;
   font-family: Roboto,Noto Sans KR,-apple-system,Dotum,sans-serif;
 }
+div.v-input__slot {
+  min-height: 51px !important;
+  height: 50px !important;
+}
+#app > div.wrapper > div:nth-child(3) > div > div > div.v-input__append-inner {
+  margin-top: 4px;
+}
 </style>
