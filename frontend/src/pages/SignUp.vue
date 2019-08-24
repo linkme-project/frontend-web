@@ -60,7 +60,7 @@
           width="100%"
           min-height="48px"
           class="email-btn"
-          to="/sign-up-1"
+          to="/sign-up-input"
         >
         이메일로 가입
         </v-btn>

@@ -3,8 +3,17 @@
       <div class="signup-title">
         회원가입
       </div>
-      <div style="height: 61px;">
-        <!-- -->
+      <div style="height: 61px; display: flex; flex-direction: row; margin: 30px 0px;">
+        <v-checkbox
+          hide-details
+          color="#00c4c4"
+          style="margin: 0px; padding: 0px;"
+        />
+        <div style="margin-right: auto; text-align: start; padding: 0px 10px;">
+          <div style="font-weight: 700; font-size: 15px; padding: 5px 0px;">전체동의</div>
+          <div style="font-weight: 350; font-size: 12px;">링크미 서비스 이용약관, 쿠폰 포인트 오픈알림 뉴스레터 수신 (선택)</div>
+        </div>
+        <v-icon>keyboard_arrow_right</v-icon>
       </div>
       <v-text-field
         placeholder="이메일 계정"
