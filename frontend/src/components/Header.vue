@@ -9,7 +9,6 @@
       <strong style="vertical-align: middle; font-size: 22px;">LinkME</strong>
     </div>
     <v-spacer></v-spacer>
-
     <v-btn icon>
       <v-icon>search</v-icon>
     </v-btn>
