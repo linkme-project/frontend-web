@@ -1,6 +1,6 @@
 <template>
     <div class="wrapper">
-      <img src="static/linkme-logo-square.png" style="width: 100px; height: 100px; margin-top: 120px; margin-bottom: 20px;"/>
+      <img src="/static/linkme-logo-square.png" style="width: 100px; height: 100px; margin-top: 120px; margin-bottom: 20px;"/>
       <p class="sign-in-title">
         <b>서비스 준비중</b>입니다.
       </p>
