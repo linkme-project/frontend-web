@@ -12,7 +12,7 @@
       <v-icon>home</v-icon>
     </v-btn>
 
-    <v-btn value="invest" to="/test">
+    <v-btn value="invest" to="/invest">
       <span style="font-size: 10px;">투자</span>
       <v-icon>trending_up</v-icon>
     </v-btn>

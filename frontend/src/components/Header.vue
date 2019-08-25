@@ -6,7 +6,7 @@
     flat
   >
     <div style="line-height: 48px; padding-top: 5px;">
-      <strong style="vertical-align: middle; font-size: 22px;">LinkME</strong>
+      <img src="/static/linkme-logo-rect.png" style="height: 26px; vertical-align: middle; margin-left: -10px;"/>
     </div>
     <v-spacer></v-spacer>
     <v-btn icon>

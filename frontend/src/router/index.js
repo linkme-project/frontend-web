@@ -9,6 +9,7 @@ import Settings from '@/pages/Settings'
 import More from '@/pages/More'
 import Login from '@/pages/Login'
 import NotProvided from '@/pages/NotProvided'
+import Invest from '@/pages/Invest'
 
 Vue.use(Router)
 
@@ -59,6 +60,11 @@ export default new Router({
       path: '/not-provided',
       name: 'NotProvided',
       component: NotProvided
+    },
+    {
+      path: '/invest',
+      name: 'Invest',
+      component: Invest
     }
   ]
 })
