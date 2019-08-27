@@ -6,7 +6,7 @@
     flat
   >
     <div style="line-height: 48px; padding-top: 5px;">
-      <img src="/static/linkme-logo-rect.png" style="height: 26px; vertical-align: middle; margin-left: -10px;"/>
+      <router-link to="/"><img src="/static/linkme-logo-rect.png" style="height: 26px; vertical-align: middle; margin-left: -10px;"/></router-link>
     </div>
     <v-spacer></v-spacer>
     <v-btn icon>
@@ -23,8 +23,6 @@
 export default {
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App',
-      list: []
     }
   }
 }
