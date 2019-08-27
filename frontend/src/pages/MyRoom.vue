@@ -116,17 +116,11 @@ export default {
   components: {
     'custom-bottom-nav': bottomNavigation
   },
-  data: () => ({
-    settings: [],
-    items: [
-      {
-        title: 'Attractions',
-        items: [
-          { title: 'List Item' }
-        ]
-      }
-    ]
-  })
+  mounted () {
+    if (!this.$store.state.isLogin) {
+      this.$router.push('/sign-in-or-sign-up')
+    }
+  }
 }
 </script>
 

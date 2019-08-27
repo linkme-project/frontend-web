@@ -19,7 +19,7 @@
       <v-icon>trending_up</v-icon>
     </v-btn>
 
-    <v-btn value="my" to="/sign-in">
+    <v-btn value="my" to="/my-room">
       <span style="font-size: 10px;">My</span>
       <v-icon>person</v-icon>
     </v-btn>

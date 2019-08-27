@@ -38,6 +38,7 @@
           width="100%"
           min-height="48px"
           class="login-btn"
+          @click="login"
         >
           로그인
         </v-btn>
@@ -108,10 +109,13 @@ export default {
   components: {
     'custom-footer': footer
   },
-  name: 'HelloWorld',
-  data () {
-    return {
-      msg: '테스트 페이지다 이 새끼야'
+  data: () => ({
+
+  }),
+  methods: {
+    login () {
+      this.$store.commit('login')
+      this.$router.push('/')
     }
   }
 }

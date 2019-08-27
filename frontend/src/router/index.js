@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Main from '@/pages/Main'
 import MyRoom from '@/pages/MyRoom'
-import SignIn from '@/pages/SignIn'
+import SignInOrSignUp from '@/pages/SignInOrSignUp'
 import SignUp from '@/pages/SignUp'
 import SignUpInput from '@/pages/SignUpInput'
 import Settings from '@/pages/Settings'
@@ -10,6 +10,7 @@ import More from '@/pages/More'
 import Login from '@/pages/Login'
 import NotProvided from '@/pages/NotProvided'
 import Invest from '@/pages/Invest'
+import PrdDetail from '@/pages/PrdDetail'
 
 Vue.use(Router)
 
@@ -22,14 +23,19 @@ export default new Router({
       component: Main
     },
     {
+      path: '/products',
+      name: 'Products',
+      component: PrdDetail
+    },
+    {
       path: '/my-room',
       name: 'MyRoom',
       component: MyRoom
     },
     {
-      path: '/sign-in',
-      name: 'SignIn',
-      component: SignIn
+      path: '/sign-in-or-sign-up',
+      name: 'SignInOrSignUp',
+      component: SignInOrSignUp
     },
     {
       path: '/sign-up',
