@@ -178,7 +178,7 @@ export default {
 }
 .user-list {
   display: relative;
-  margin-top: 60px;
+  margin: 60px 0px;
 }
 .logout {
   margin: 24px 16px;
