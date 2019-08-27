@@ -100,6 +100,7 @@
           outlined
           color="#aaaaaa"
           small
+          @click="logout"
         >
           <span style="font-size: 11px; font-weight: 700;">로그아웃</span>
         </v-btn>
@@ -119,6 +120,12 @@ export default {
   mounted () {
     if (!this.$store.state.isLogin) {
       this.$router.push('/sign-in-or-sign-up')
+    }
+  },
+  methods: {
+    logout () {
+      this.$store.commit('logout')
+      this.$router.push('/')
     }
   }
 }
