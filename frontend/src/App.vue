@@ -7,9 +7,9 @@
 </template>
 
 <script>
-import footer from './components/FooterInPage'
-import header from './components/Header'
-import alert from './components/Alert'
+import footer from '@/components/FooterInPage'
+import header from '@/components/Header'
+import alert from '@/components/Alert'
 
 export default {
   name: 'App',

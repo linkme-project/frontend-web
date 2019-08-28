@@ -1,5 +1,6 @@
 <template>
     <div class="wrapper">
+      <spinner :isShow="isSpinnerShow" :key="spinnerKey"/>
       <div>
         <h2 class="login-title">
           로그인
@@ -103,19 +104,30 @@
 </template>
 
 <script>
-import footer from '../components/FooterInLogin'
+import footer from '@/components/FooterInLogin'
+import Spinner from '@/components/Spinner'
 
 export default {
   components: {
-    'custom-footer': footer
+    'custom-footer': footer,
+    'spinner': Spinner
   },
-  data: () => ({
-
-  }),
+  data () {
+    return {
+      isSpinnerShow: false,
+      spinnerKey: 'offSpinner'
+    }
+  },
   methods: {
     login () {
-      this.$store.commit('login')
-      this.$router.push('/')
+      this.isSpinnerShow = !this.isSpinnerShow
+      this.spinnerKey = 'showSpinner'
+      this.$nextTick(() => {
+        setTimeout(() => {
+          this.$store.commit('login')
+          this.$router.push('/')
+        }, 1000)
+      })
     }
   }
 }

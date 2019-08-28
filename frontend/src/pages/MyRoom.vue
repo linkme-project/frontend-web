@@ -1,5 +1,6 @@
 <template>
   <div class="wrapper">
+    <spinner :isShow="isSpinnerShow" :key="spinnerKey"/>
     <div class="user-info">
       <div class="edit-info-btn">
         <v-btn
@@ -112,10 +113,18 @@
 
 <script>
 import bottomNavigation from '../components/BottomNavigation'
+import Spinner from '@/components/Spinner'
 
 export default {
+  data () {
+    return {
+      isSpinnerShow: false,
+      spinnerKey: 'offSpinner'
+    }
+  },
   components: {
-    'custom-bottom-nav': bottomNavigation
+    'custom-bottom-nav': bottomNavigation,
+    Spinner
   },
   mounted () {
     if (!this.$store.state.isLogin) {
@@ -124,8 +133,14 @@ export default {
   },
   methods: {
     logout () {
-      this.$store.commit('logout')
-      this.$router.push('/')
+      this.isSpinnerShow = !this.isSpinnerShow
+      this.spinnerKey = 'showSpinner'
+      this.$nextTick(() => {
+        setTimeout(() => {
+          this.$store.commit('logout')
+          this.$router.push('/')
+        }, 1000)
+      })
     }
   }
 }
@@ -181,6 +196,6 @@ export default {
   margin: 60px 0px;
 }
 .logout {
-  margin: 24px 16px;
+  margin: 8px 16px 24px 16px;
 }
 </style>
