@@ -1,6 +1,6 @@
 <template>
   <div id="footer">
-    <div style="width: 100%;">
+    <div style="width: 100%; background-color: #fff">
       {{ msg }}&nbsp;&nbsp;
       <router-link :to="link">{{ linkText }}</router-link>
     </div>

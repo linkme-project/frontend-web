@@ -42,7 +42,7 @@ export default {
   font-weight: normal;
   background-color: #f5f7fa;
   padding: 16px;
-  height: 800px;
+  height: 100vh;
 }
 .sign-in-title {
   font-size: 24px;

@@ -2,6 +2,7 @@
   <v-app-bar
     tile
     light
+    fixed
     dense
     flat
   >

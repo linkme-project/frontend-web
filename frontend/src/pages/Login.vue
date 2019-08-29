@@ -11,6 +11,7 @@
           outlined
           single-line
           hide-details
+          v-model="userId"
         ></v-text-field>
         <v-text-field
           class="login-form"
@@ -18,6 +19,7 @@
           single-line
           outlined
           hide-details
+          v-model="password"
         ></v-text-field>
         <div style="position: relative">
           <div class="login-action">
@@ -99,6 +101,28 @@
 
         </div>
       </div>
+      <v-dialog
+        v-model="dialog"
+        max-width="290"
+      >
+        <v-card>
+          <v-card-title class="headline" style="justify-content: center;">로그인 실패</v-card-title>
+
+          <v-card-text>
+            {{ loginMessage }}
+          </v-card-text>
+
+          <v-card-actions style="justify-content: center;">
+            <v-btn
+              color="green darken-1"
+              text
+              @click="dialog = false"
+            >
+              확인
+            </v-btn>
+          </v-card-actions>
+        </v-card>
+      </v-dialog>
       <custom-footer msg="아직 링크미 계정이 없나요?" link="/sign-up" link-text="회원가입" />
     </div>
 </template>
@@ -114,20 +138,38 @@ export default {
   },
   data () {
     return {
+      userId: '',
+      password: '',
+      loginMessage: '',
+      dialog: false,
       isSpinnerShow: false,
       spinnerKey: 'offSpinner'
     }
   },
   methods: {
     login () {
+      if (this.userId === '') {
+        this.openDialog('아이디를 입력해주세요')
+        return
+      }
+      if (this.password === '') {
+        this.openDialog('패스워드를 입력해주세요')
+        return
+      }
+
       this.isSpinnerShow = !this.isSpinnerShow
       this.spinnerKey = 'showSpinner'
+
       this.$nextTick(() => {
         setTimeout(() => {
           this.$store.commit('login')
           this.$router.push('/')
         }, 1000)
       })
+    },
+    openDialog (message) {
+      this.loginMessage = message
+      this.dialog = true
     }
   }
 }
