@@ -2,7 +2,7 @@
   <div id="app">
     <!-- <custom-alert /> -->
     <custom-header />
-    <router-view style="padding-top: 48px;"/>
+    <router-view style="margin-top: 48px;"/>
   </div>
 </template>
 
