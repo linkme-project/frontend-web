@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <custom-alert />
+    <!-- <custom-alert /> -->
     <custom-header />
     <router-view />
   </div>
@@ -9,14 +9,14 @@
 <script>
 import footer from '@/components/FooterInPage'
 import header from '@/components/Header'
-import alert from '@/components/Alert'
+// import alert from '@/components/Alert'
 
 export default {
   name: 'App',
   components: {
+    // 'custom-alert': alert,
     'custom-footer': footer,
-    'custom-header': header,
-    'custom-alert': alert
+    'custom-header': header
   }
 }
 </script>

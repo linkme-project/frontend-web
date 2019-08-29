@@ -19,6 +19,7 @@
           single-line
           outlined
           hide-details
+          type="password"
           v-model="password"
         ></v-text-field>
         <div style="position: relative">
