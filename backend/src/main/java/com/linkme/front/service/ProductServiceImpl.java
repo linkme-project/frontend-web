@@ -28,9 +28,9 @@ public class ProductServiceImpl implements ProductsService{
 	@Override
 	public List<Products> prdDetail(String prdCd) {
 		List<Products> prdDetail = new ArrayList<Products>();
-		prdDetail.add(new Products("1", "이 시대의 펀드", "/images/와디즈 캡쳐_1.png"));
-		prdDetail.add(new Products("2", "강소기업", "/images/banner.jpg"));
-		prdDetail.add(new Products("3", "스타일 난다", "/images/와디즈 캡쳐_1.png"));
+		prdDetail.add(new Products("1", "이 시대의 펀드", "/static/images/와디즈_캡쳐_1.png"));
+		prdDetail.add(new Products("2", "강소기업", "/static/images/banner.jpg"));
+		prdDetail.add(new Products("3", "스타일 난다", "/static/images/와디즈_캡쳐_2.png"));
 		return prdDetail;
 	}
 	
@@ -38,9 +38,9 @@ public class ProductServiceImpl implements ProductsService{
 	public List<Products> prdSearch(String searchPrdNm) {
 		//API를 통해 검색한 상품 리스트 가져오기
 		List<Products> prdSearch = new ArrayList<Products>();
-		prdSearch.add(new Products("1", "이 시대의 펀드", "/images/와디즈 캡쳐_2.png"));
-		prdSearch.add(new Products("2", "강소기업", "/images/banner.jpg"));
-		prdSearch.add(new Products("3", "스타일 난다", "/images/와디즈 캡쳐_1.png"));
+		prdSearch.add(new Products("1", "이 시대의 펀드", "/static/images/와디즈_캡쳐_2.png"));
+		prdSearch.add(new Products("2", "강소기업", "/static/images/banner.jpg"));
+		prdSearch.add(new Products("3", "스타일 난다", "/static/images/와디즈_캡쳐_1.png"));
 		return prdSearch;
 	}
 
