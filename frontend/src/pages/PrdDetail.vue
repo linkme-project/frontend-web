@@ -18,7 +18,7 @@
       </ul>
     </div>
     <div id="jb-header">
-      <img src="static/images/와디즈 캡쳐_1.png" class="eachFundImg" id="adver" />
+      <img src="/static/images/와디즈_캡쳐_1.png" class="eachFundImg" id="adver" />
     </div>
     <div id="jb-container">
       <div id="prdDetailTitle">
@@ -46,7 +46,7 @@
         </div>
       </div>
       <div id="magamFund">
-        <img src="images/banner.jpg" alt="Norway" id="imgMagamFund" />
+        <img src="/static/images/banner.jpg" alt="Norway" id="imgMagamFund" />
         <div class="container">
           <div class="my-2">
             <v-btn
@@ -68,18 +68,12 @@
 </template>
 
 <script>
-import axios from 'axios'
 import footer from '../components/FooterInPage'
 // 데이터 렌더링 가져오기
 export default {
   name: 'HelloWorld',
   data () {
     return {
-      imageSlide: [
-        '<img src="images/와디즈 캡쳐_1.png" class="eachFundImg" id="adver"/>',
-        '<img src="images/와디즈 캡쳐_2.png" class="eachFundImg" id="adver"/>',
-        '<img src="images/와디즈 캡쳐_3.png" class="eachFundImg" id="adver"/>'
-      ]
     }
   },
   components: {
@@ -87,17 +81,6 @@ export default {
   },
   created: function () {},
   methods: {
-    ajaxTest: function () {
-      console.log('나오냐')
-      axios
-        .get('/vueList')
-        .then(res => {
-          console.log(res.data)
-        })
-        .catch(e => {
-          console.error(e)
-        })
-    },
     prdInsertFunc: function () {
       this.$router.push({path: '/'})
     }
