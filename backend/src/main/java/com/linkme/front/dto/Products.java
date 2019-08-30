@@ -1,6 +1,5 @@
-package com.linkme.front.dto;
 
-import org.springframework.beans.factory.annotation.Autowired;
+package com.linkme.front.dto;
 
 public class Products {
 	private String prdCd;
