@@ -41,6 +41,7 @@
             min-width="335px"
             height="45px"
             style="margin-top: 12px; font-size: 21px;"
+            v-on:click="prdInsertFunc()"
           >펀딩하기</v-btn>
         </div>
       </div>
@@ -96,6 +97,9 @@ export default {
         .catch(e => {
           console.error(e)
         })
+    },
+    prdInsertFunc: function () {
+      this.$router.push({path: '/'})
     }
   }
   // ajax 개념 vue 문법을 활용하여 controller로 접
