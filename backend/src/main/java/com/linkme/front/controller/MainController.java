@@ -1,11 +1,9 @@
 package com.linkme.front.controller;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,8 +12,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.linkme.front.dto.Products;
 import com.linkme.front.service.ProductsService;
-
-import net.minidev.json.JSONObject;
 
 @Controller
 public class MainController {
@@ -57,7 +53,7 @@ public class MainController {
 		return resultMap;
 	}
 	
-	//검색 진행
+	//상품 상세 정보
 	@RequestMapping(value = "/prdDetailAxios", method = RequestMethod.GET)
 	@ResponseBody
 	public HashMap<String, Object> vueList(Model model, Products products) {
@@ -66,8 +62,12 @@ public class MainController {
 		
 		List<Products> prdDetail = productsService.prdDetail(products.getPrdCd());
 		
+		for(int i = 0; i < prdDetail.size(); i++) {
+			
+		}
+		
 		//model.addAttribute("rcmdPrdList", rcmdPrdData);
-		System.out.println("prdDetail Controller" + products.getPrdCd());
+		System.out.println("prdDetail Controller : " + products.getPrdCd());
 		resultMap.put("prdDetail", prdDetail);
 		
 		return resultMap;
