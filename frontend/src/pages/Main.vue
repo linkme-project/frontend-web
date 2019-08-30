@@ -3,7 +3,7 @@
     <div id="jb-navList">
       <ul class="ulNavList">
         <li class="liNavList"><a class="aNavList" href="#home">Home</a></li>
-        <li class="liNavList"><a class="aNavList" href="/detail">Detail</a></li>
+        <li class="liNavList"><router-link class="aNavList" to="/prdHeader/detail">Detail</router-link></li>
         <li class="liNavList"><a class="aNavList" href="#contact">Contact</a></li>
         <li class="liNavList"><a class="aNavList" href="#about">About</a></li>
       </ul>
@@ -12,36 +12,43 @@
       <carousel :data="imageSlide"></carousel>
     </div>
     <div id="jb-container">
+      <h2>이 펀딩 어때요?</h2>
       <div id="fundImgListContent">
-        <h2>이 펀딩 어때요?</h2>
         <div class="fundImg" id="fundImg_1">
-          <div class="eachFundImgDiv"><img src="static/images/banner.jpg" class="eachFundImg" id="adver">
+          <div class="eachFundImgDiv">
+            <img src="static/images/banner.jpg" class="eachFundImg" id="adver">
             <div class="fundText">
               액정보호 필름 붙일 때마다 소심이가 된다면?
             </div>
           </div>
         </div>
         <div class="fundImg">
-          <div class="eachFundImgDiv"><img src="static/images/card.jpg" class="eachFundImg" id="adver">
+          <div class="eachFundImgDiv">
+            <img src="static/images/card.jpg" class="eachFundImg" id="adver">
             <div class="fundText">카드 한판 칩시다.</div>
           </div>
         </div>
-        <div class="fundImg"><div class="eachFundImgDiv"><img src="static/images/couple.jpg" class="eachFundImg" id="adver">
+        <div class="fundImg">
+          <div class="eachFundImgDiv">
+            <img src="static/images/couple.jpg" class="eachFundImg" id="adver">
       			<div class="fundText">시간의 소중함</div>
       		</div>
       	</div>
       	<div class="fundImg">
-      		<div class="eachFundImgDiv"><img src="static/images/smtm.png" class="eachFundImg" id="adver">
+      		<div class="eachFundImgDiv">
+            <img src="static/images/smtm.png" class="eachFundImg" id="adver">
       			<div class="fundText">재미지죠 이렇게 특가 할인이 없답니다.</div>
       		</div>
       	</div>
       	<div class="fundImg">
-      		<div class="eachFundImgDiv"><img src="static/images/happy1.png" class="eachFundImg" id="adver">
+      		<div class="eachFundImgDiv">
+            <img src="static/images/happy1.png" class="eachFundImg" id="adver">
       			<div class="fundText">재미지죠 이렇게 특가 할인이 없답니다.</div>
       		</div>
       	</div>
         <div class="fundImg">
-          <div class="eachFundImgDiv"><img src="static/images/happy2.jpg" class="eachFundImg" id="adver">
+          <div class="eachFundImgDiv">
+            <img src="static/images/happy2.jpg" class="eachFundImg" id="adver">
             <div class="fundText">재미지죠 이렇게 특가 할인이 없답니다.</div>
           </div>
       	</div>
@@ -95,7 +102,7 @@
       		</div>
         </div>
         <div class="recentFund">
-        	<div class="eachFundImgDiv"><img src="static/images/happy3.png" class="eachFundImg" id="adver">
+        	<div class="eachFundImgDiv"><img src="/static/images/happy3.png" class="eachFundImg" id="adver">
       			<div class="fundText">재밌는 드라마 곧 마감!</div>
       		</div>
         </div>
@@ -147,9 +154,9 @@ export default {
   data () {
     return {
       imageSlide: [
-        '<img src="static/images/와디즈 캡쳐_1.png" class="eachFundImg" id="adver"/>',
-        '<img src="static/images/와디즈 캡쳐_2.png" class="eachFundImg" id="adver"/>',
-        '<img src="static/images/와디즈 캡쳐_3.png" class="eachFundImg" id="adver"/>'
+        '<img src="static/images/와디즈_캡쳐_1.png" class="eachFundImg" id="adver"/>',
+        '<img src="static/images/와디즈_캡쳐_2.png" class="eachFundImg" id="adver"/>',
+        '<img src="static/images/와디즈_캡쳐_3.png" class="eachFundImg" id="adver"/>'
       ]
     }
   },
@@ -216,12 +223,11 @@ body{
   height: 350px;
 }
 #fundImgListContent {
-  width: 600px;
-/*         padding: 20px; */
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-row-gap: 12px;
+  grid-column-gap: 8px;
   margin-bottom: 20px;
-  float: left;
-/*         border: 1px solid #bcbcbc; */
-  height: 410px;
 }
 .fundImg{
   width: 200px;

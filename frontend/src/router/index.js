@@ -10,12 +10,15 @@ import More from '@/pages/More'
 import Login from '@/pages/Login'
 import NotProvided from '@/pages/NotProvided'
 import Invest from '@/pages/Invest'
+
 import PrdDetail from '@/pages/PrdDetail'
+import PrdSearch from '@/pages/PrdSearch'
+import PrdList from '@/pages/PrdList'
 
 Vue.use(Router)
 
 export default new Router({
-  mode: 'history',
+  // mode: 'history',
   routes: [
     {
       path: '/',
@@ -71,6 +74,10 @@ export default new Router({
       path: '/invest',
       name: 'Invest',
       component: Invest
-    }
+    },
+    {path: '/prdHeader/detail/:prdCd', component: PrdDetail},
+    {path: '/prdHeader/prdSearch', component: PrdSearch},
+    {path: '/prdHeader/prdList/:prdNm', component: PrdList}
+
   ]
 })

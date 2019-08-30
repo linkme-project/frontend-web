@@ -7,10 +7,12 @@
     flat
   >
     <div style="line-height: 48px; padding-top: 5px;">
-      <router-link to="/"><img src="/static/linkme-logo-rect.png" style="height: 26px; vertical-align: middle; margin-left: -10px;"/></router-link>
+      <router-link to="/">
+        <img src="/static/linkme-logo-rect.png" style="height: 26px; vertical-align: middle; margin-left: -10px;"/>
+      </router-link>
     </div>
     <v-spacer></v-spacer>
-    <v-btn icon>
+    <v-btn icon @click="moveToSearch">
       <v-icon>search</v-icon>
     </v-btn>
 
@@ -24,6 +26,11 @@
 export default {
   data () {
     return {
+    }
+  },
+  methods: {
+    moveToSearch () {
+      this.$router.push('/prdHeader/prdSearch')
     }
   }
 }
