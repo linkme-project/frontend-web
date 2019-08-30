@@ -1,13 +1,27 @@
 <template>
   <div class="wrapper">
-    <div id="jb-navList">
-      <ul class="ulNavList">
-        <li class="liNavList"><a class="aNavList" href="#home">Home</a></li>
-        <li class="liNavList"><router-link class="aNavList" to="/prdHeader/detail">Detail</router-link></li>
-        <li class="liNavList"><a class="aNavList" href="#contact">Contact</a></li>
-        <li class="liNavList"><a class="aNavList" href="#about">About</a></li>
-      </ul>
-    </div>
+    <v-tabs
+      fixed-tabs
+      center-active
+      class="slide-tabs"
+      height="40px"
+    >
+      <v-tab style="font-size: 15px;">
+        추천
+      </v-tab>
+      <v-tab>
+        얼리버드
+      </v-tab>
+      <v-tab>
+        기획전
+      </v-tab>
+      <v-tab>
+        트렌드
+      </v-tab>
+      <v-tab>
+        메이커
+      </v-tab>
+    </v-tabs>
     <div id="jb-header">
       <carousel :data="imageSlide"></carousel>
     </div>
