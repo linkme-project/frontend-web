@@ -140,7 +140,7 @@ export default {
   },
   data () {
     return {
-      userId: 'window.LinkMeApp.regFido()',
+      userId: '',
       password: '',
       loginMessage: '',
       dialog: false,
@@ -155,11 +155,13 @@ export default {
     },
     login () {
       if (this.userId === '') {
-        this.openDialog('아이디를 입력해주세요 (' + window.LinkMeApp + ')')
+        // this.openDialog('아이디를 입력해주세요')
+        this.openDialog(window.LinkMeApp)
         return
       }
       if (this.password === '') {
-        this.openDialog('패스워드를 입력해주세요')
+        this.openDialog(window.LinkMeApp)
+        // this.openDialog('패스워드를 입력해주세요')
         return
       }
 
