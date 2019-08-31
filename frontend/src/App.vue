@@ -11,12 +11,18 @@ import footer from '@/components/FooterInPage'
 import header from '@/components/Header'
 // import alert from '@/components/Alert'
 
-export default {
+export default window.App = {
   name: 'App',
   components: {
     // 'custom-alert': alert,
     'custom-footer': footer,
     'custom-header': header
+  },
+  methods: {
+    onFidoAuth (type, result) {
+      // global 
+      window.alert(type + ' ' + result)
+    }
   }
 }
 </script>
