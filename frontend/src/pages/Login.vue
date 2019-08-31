@@ -140,7 +140,7 @@ export default {
   },
   data () {
     return {
-      userId: '',
+      userId: 'window.LinkMeApp.regFido()',
       password: '',
       loginMessage: '',
       dialog: false,
