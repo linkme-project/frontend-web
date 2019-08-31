@@ -70,6 +70,7 @@
             width="100%"
             min-height="48px"
             class="social-btn"
+            @click="regFido"
           >
             카카오
           </v-btn>
@@ -79,6 +80,7 @@
             width="100%"
             min-height="48px"
             class="social-btn"
+            @click="authFido"
           >
             네이버
           </v-btn>
@@ -149,9 +151,11 @@ export default {
     }
   },
   methods: {
-    test () {
-      // eslint-disable-next-line
-      eval(this.userId)
+    regFido () {
+      window.LinkMeApp.regFido()
+    },
+    authFido () {
+      window.LinkMeApp.authFido()
     },
     login () {
       if (this.userId === '') {
@@ -159,8 +163,7 @@ export default {
         return
       }
       if (this.password === '') {
-        this.openDialog(window.LinkMeApp)
-        // this.openDialog('패스워드를 입력해주세요')
+        this.openDialog('패스워드를 입력해주세요')
         return
       }
 
@@ -171,9 +174,6 @@ export default {
         setTimeout(() => {
           this.$store.commit('login')
           this.$router.push('/')
-          if (window.LinkMeApp) {
-            window.LinkMeApp.regFido()
-          }
         }, 1000)
       })
     },
@@ -182,6 +182,11 @@ export default {
       this.dialog = true
     }
   }
+}
+
+// eslint-disable-next-line
+function fidoCallback (funcType, result) {
+  window.alert(funcType + ' ' + result)
 }
 </script>
 
