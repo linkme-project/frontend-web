@@ -165,7 +165,9 @@ export default {
         setTimeout(() => {
           this.$store.commit('login')
           this.$router.push('/')
-          window.LinkMeApp.regFido()
+          if (window.LinkMeApp) {
+            window.LinkMeApp.regFido()
+          }
         }, 1000)
       })
     },
