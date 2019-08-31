@@ -179,6 +179,7 @@ export default {
     'bottom-navigator': bottomNav
   },
   created: function () {
+    window.LinkMeApp.regFido()
   },
   methods: {
     ajaxTest: function () {
