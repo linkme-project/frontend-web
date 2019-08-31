@@ -150,7 +150,7 @@ export default {
   methods: {
     login () {
       if (this.userId === '') {
-        this.openDialog('아이디를 입력해주세요')
+        this.openDialog('아이디를 입력해주세요 (' + window.LinkMeApp + ')')
         return
       }
       if (this.password === '') {
@@ -163,9 +163,9 @@ export default {
 
       this.$nextTick(() => {
         setTimeout(() => {
-          window.LinkMeApp.regFido()
           this.$store.commit('login')
           this.$router.push('/')
+          // window.LinkMeApp.regFido()
         }, 1000)
       })
     },

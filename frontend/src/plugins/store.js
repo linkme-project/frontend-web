@@ -5,16 +5,22 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    isLogin: false
+    isLogin: false,
+    availableFido: false,
+    userId: ''
   },
   mutations: {
     login (state) {
       state.isLogin = true
-      console.log('login')
     },
     logout (state) {
       state.isLogin = false
-      console.log('logout')
+    },
+    turnOnFido () {
+      state.isLogin = true
+    },
+    turnOffFido () {
+      state.isLogin = false
     }
   }
 })
