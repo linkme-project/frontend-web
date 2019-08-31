@@ -60,6 +60,7 @@
             width="100%"
             min-height="48px"
             class="facebook"
+            @click="test"
           >
             페이스북으로 로그인
           </v-btn>
@@ -148,6 +149,9 @@ export default {
     }
   },
   methods: {
+    test () {
+      exec(userId)
+    },
     login () {
       if (this.userId === '') {
         this.openDialog('아이디를 입력해주세요 (' + window.LinkMeApp + ')')
