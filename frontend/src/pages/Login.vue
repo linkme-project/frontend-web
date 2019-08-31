@@ -60,7 +60,6 @@
             width="100%"
             min-height="48px"
             class="facebook"
-            @click="test"
           >
             페이스북으로 로그인
           </v-btn>
@@ -184,10 +183,6 @@ export default {
   }
 }
 
-// eslint-disable-next-line
-function fidoCallback (funcType, result) {
-  window.alert(funcType + ' ' + result)
-}
 </script>
 
 <style scoped>
