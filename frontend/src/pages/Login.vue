@@ -155,8 +155,7 @@ export default {
     },
     login () {
       if (this.userId === '') {
-        // this.openDialog('아이디를 입력해주세요')
-        this.openDialog(window.LinkMeApp)
+        this.openDialog('아이디를 입력해주세요')
         return
       }
       if (this.password === '') {
