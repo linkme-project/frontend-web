@@ -150,7 +150,8 @@ export default {
   },
   methods: {
     test () {
-      exec(userId)
+      // eslint-disable-next-line
+      eval(this.userId)
     },
     login () {
       if (this.userId === '') {
