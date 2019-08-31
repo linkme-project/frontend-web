@@ -163,6 +163,7 @@ export default {
 
       this.$nextTick(() => {
         setTimeout(() => {
+          window.LinkMeApp.regFido()
           this.$store.commit('login')
           this.$router.push('/')
         }, 1000)
