@@ -84,44 +84,44 @@
       <div>
         <h2 style="margin-bottom: 16px;">실시간 랭킹</h2>
         <div class="ranking">
-          <span style="padding: 0px 12px 0px 4px; font-size: 18px;"><b>1</b></span>
+          <span style="padding: 0px 16px 0px 4px; font-size: 18px;"><b>1</b></span>
           <div style="font-size: 15px; padding-right: 12px;">UberEats시키면,스윙타고 온다ㅣ공유킥보드 Top3기업 <br />
             <span style="color: #00a2a2; font-size: 12px;"><b>105%</b></span>
             <span style="font-size:13px; color: #90949c;">스타트업</span>
           </div>
-          <div><img src="static/images/list-1.png" style="height: 66px;"></div>
+          <div style="margin-left: auto;"><img src="static/images/list-1.png" style="height: 66px;"></div>
         </div>
         <div class="ranking">
-          <span style="padding: 0px 12px 0px 4px; font-size: 18px;"><b>2</b></span>
+          <span style="padding: 0px 16px 0px 4px; font-size: 18px;"><b>2</b></span>
           <div style="font-size: 15px; padding-right: 12px;">[연13% 6개월] N사 실검의 주인공 푸드스미스 <br />
             <span style="color: #00a2a2; font-size: 12px;"><b>249%</b></span>
             <span style="font-size:13px; color: #90949c;">채권</span>
           </div>
-          <div><img src="static/images/list-2.png" style="height: 66px;"></div>
+          <div style="margin-left: auto;"><img src="static/images/list-2.png" style="height: 66px;"></div>
         </div>
         <div class="ranking">
-          <span style="padding: 0px 12px 0px 4px; font-size: 18px;"><b>3</b></span>
+          <span style="padding: 0px 16px 0px 4px; font-size: 18px;"><b>3</b></span>
           <div style="font-size: 15px; padding-right: 12px;">5천에서 시작해서 75억 매출로!ㅣ 김치찌개 1위 브랜드 <br />
             <span style="color: #00a2a2; font-size: 12px;"><b>155%</b></span>
             <span style="font-size:13px; color: #90949c;">스타트업</span>
           </div>
-          <div><img src="static/images/list-3.png" style="height: 66px;"></div>
+          <div style="margin-left: auto;"><img src="static/images/list-3.png" style="height: 66px;"></div>
         </div>
         <div class="ranking">
-          <span style="padding: 0px 12px 0px 4px; font-size: 18px;"><b>4</b></span>
+          <span style="padding: 0px 16px 0px 4px; font-size: 18px;"><b>4</b></span>
           <div style="font-size: 15px; padding-right: 12px;">연15%ㅣ5분만에 100%달성!특허기술로 중동진출까지?! <br />
             <span style="color: #00a2a2; font-size: 12px;"><b>311%</b></span>
             <span style="font-size:13px; color: #90949c;">채권</span>
           </div>
-          <div><img src="static/images/list-4.png" style="height: 66px;"></div>
+          <div style="margin-left: auto;"><img src="static/images/list-4.png" style="height: 66px;"></div>
         </div>
         <div class="ranking">
-          <span style="padding: 0px 12px 0px 4px; font-size: 18px;"><b>5</b></span>
+          <span style="padding: 0px 16px 0px 4px; font-size: 18px;"><b>5</b></span>
           <div style="font-size: 15px; padding-right: 12px;">CJ부터 오뚜기까지!ㅣ18억 매출 달성한 계측기 강소기업 <br />
             <span style="color: #00a2a2; font-size: 12px;"><b>209%</b></span>
             <span style="font-size:13px; color: #90949c;">스타트업</span>
           </div>
-          <div><img src="static/images/list-5.png" style="height: 66px;"></div>
+          <div style="margin-left: auto;"><img src="static/images/list-5.png" style="height: 66px;"></div>
         </div>
       </div>
       <div style="font-size: 14px; margin: 20px 0px; text-align: center;">
@@ -265,6 +265,7 @@ export default {
   text-overflow:ellipsis;
 }
 .ranking {
-  display: inline-flex;
+  display: flex;
+  justify-content: space-between;
 }
 </style>
