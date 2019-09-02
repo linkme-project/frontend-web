@@ -32,48 +32,56 @@
     <div id="jb-container">
       <h2>이 펀딩 어때요?</h2>
       <div id="fundImgListContent">
-        <div class="fundImg">
-          <div class="eachFundImgDiv">
-            <img src="static/images/invest-1.png" class="eachFundImg" id="adver">
-            <div class="fundText">
-              약 7,600억원 추정 규모의 위폐감별기 시장을 잡아라!
-            </div>
-            <div>
-              <span style="color: #00a2a2; font-size: 12px;"><b>240%</b></span>
-              <span style="font-size:13px; color: #90949c;">투자</span>
-            </div>
-          </div>
-        </div>
-        <div class="fundImg">
-          <div class="eachFundImgDiv">
-            <img src="static/images/invest-2.png" class="eachFundImg" id="adver">
-            <div class="fundText">[연13% 6개월] N사 실검의 주인공 푸드스미스</div>
-            <div>
-              <span style="color: #00a2a2; font-size: 12px;"><b>89%</b></span>
-              <span style="font-size:13px; color: #90949c;">투자</span>
+        <router-link to="/product-detail">
+          <div class="fundImg">
+            <div class="eachFundImgDiv">
+              <img src="static/images/invest-1.png" class="eachFundImg" id="adver">
+              <div class="fundText">
+                약 7,600억원 추정 규모의 위폐감별기 시장을 잡아라!
+              </div>
+              <div>
+                <span style="color: #00a2a2; font-size: 12px;"><b>240%</b></span>
+                <span style="font-size:13px; color: #90949c;">투자</span>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="fundImg">
-          <div class="eachFundImgDiv">
-            <img src="static/images/invest-3.png" class="eachFundImg" id="adver">
-      			<div class="fundText">초음파 세척기 아직 모르시나요? 세균 제거 99.7%오염 완벽 세척!</div>
-            <div>
-              <span style="color: #00a2a2; font-size: 12px;"><b>157%</b></span>
-              <span style="font-size:13px; color: #90949c;">리워드</span>
+        </router-link>
+        <router-link to="/product-detail">
+          <div class="fundImg">
+            <div class="eachFundImgDiv">
+              <img src="static/images/invest-2.png" class="eachFundImg" id="adver">
+              <div class="fundText">[연13% 6개월] N사 실검의 주인공 푸드스미스</div>
+              <div>
+                <span style="color: #00a2a2; font-size: 12px;"><b>89%</b></span>
+                <span style="font-size:13px; color: #90949c;">투자</span>
+              </div>
             </div>
-      		</div>
-      	</div>
-      	<div class="fundImg">
-      		<div class="eachFundImgDiv">
-            <img src="static/images/invest-4.png" class="eachFundImg" id="adver">
-      			<div class="fundText">[연13% 6개월] N사 실검의 주인공 푸드스미스</div>
-            <div>
-              <span style="color: #00a2a2; font-size: 12px;"><b>240%</b></span>
-              <span style="font-size:13px; color: #90949c;">리워드</span>
+          </div>
+        </router-link>
+        <router-link to="/product-detail">
+          <div class="fundImg">
+            <div class="eachFundImgDiv">
+              <img src="static/images/invest-3.png" class="eachFundImg" id="adver">
+              <div class="fundText">초음파 세척기 아직 모르시나요? 세균 제거 99.7%오염 완벽 세척!</div>
+              <div>
+                <span style="color: #00a2a2; font-size: 12px;"><b>157%</b></span>
+                <span style="font-size:13px; color: #90949c;">리워드</span>
+              </div>
             </div>
-      		</div>
-      	</div>
+          </div>
+        </router-link>
+        <router-link to="/product-detail">
+          <div class="fundImg">
+            <div class="eachFundImgDiv">
+              <img src="static/images/invest-4.png" class="eachFundImg" id="adver">
+              <div class="fundText">[연13% 6개월] N사 실검의 주인공 푸드스미스</div>
+              <div>
+                <span style="color: #00a2a2; font-size: 12px;"><b>240%</b></span>
+                <span style="font-size:13px; color: #90949c;">리워드</span>
+              </div>
+            </div>
+          </div>
+        </router-link>
       </div>
       <div class="event">
         <img src="static/images/event-1.png" style="width: 100%;border: 1px solid #eee; margin-right: 8px;">
@@ -220,12 +228,23 @@ export default {
         }).catch(e => {
           console.error(e)
         })
+    },
+    moveToDetail () {
+      console.log('text')
     }
   }
 }
 </script>
 
 <style scoped>
+a {
+  font-size: 14px;
+  text-decoration:none;
+  color: #2c3e50;
+}
+a:active {
+  background-color: #ccc;
+}
 .invest-alert {
   background-color: #44484b;
   color: #fff;
