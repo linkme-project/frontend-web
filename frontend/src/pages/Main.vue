@@ -6,19 +6,19 @@
       class="slide-tabs"
       height="40px"
     >
-      <v-tab to="/">
+      <v-tab>
         추천
       </v-tab>
-      <v-tab to="/not-provided">
+      <v-tab>
         얼리버드
       </v-tab>
-      <v-tab to="/not-provided">
+      <v-tab>
         기획전
       </v-tab>
-      <v-tab to="/not-provided">
+      <v-tab>
         트렌드
       </v-tab>
-      <v-tab to="/not-provided">
+      <v-tab>
         메이커
       </v-tab>
     </v-tabs>
