@@ -1,14 +1,20 @@
 
 <template>
-  <div class="hello">
+  <div class="wrapper">
     <prd-header />
-    <div id="jb-header">
-      <img src="static/images/와디즈 캡쳐_1.png" class="eachFundImg" id="adver" />
+    <div style="margin-bottom: 26px;">
+      <img src="static/images/detail-1.png" style="width: 100%;" class="eachFundImg" id="adver" />
     </div>
-    <div id="jb-container">
-      <div id="prdDetailTitle">
-        <h2>약 7,600억원 추정 규모의 위폐감별기 시장을 잡아라!</h2>
+    <div class="product-content">
+      <div style="margin-bottom: 12px;">
+        <label style="font-size: 19px; color: #1d2129;"><strong>28,294,840 원 달성</strong></label> <span style="font-size: 13px; color: #90949c">목표금액 50,001,080원 <b>57%</b></span> <br />
+        <label style="font-size: 19px; color: #1d2129;"><strong>17일 남음</strong></label> <span style="font-size: 13px; color: #90949c">2019.09.20 15:00 마감</span> <br />
+        <div style="margin-top: 12px;">
+          <span style="font-size: 10px; border: 1px solid #eee; margin-right: 4px; padding: 2px;">증액예정</span>
+          <span style="font-size: 12px; color: #90949c">모집 상황에 따라 최대 200,000,984원으로 증액 예정입니다.</span>
+        </div>
       </div>
+      <v-divider />
       <div
         id="prdDetailExplain"
       >쏟을 걱정 노! 손은 핸들 위로! 1+1컵홀더 - 컵플러스' 의 문제점을 모두 개선한 ★차량필수템★ 공간을 똑똑하게 쓰는 3in1 컵홀더! 트레이&무선충전까지</div>
@@ -96,36 +102,13 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-body {
-  margin: 0px;
+.wrapper {
+  text-align: start;
 }
-#jb-container {
-  width: auto;
-  padding: 20px;
-  padding-top: 50px;
+.product-content {
+  margin: 0px 12px 24px 12px;
 }
-/* 네비게이션 스타일 */
-.ulNavList {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #fff;
-}
-.liNavList {
-  float: left;
-  width: 190px;
-}
-.aNavList {
-  display: block;
-  color: #7b7b7b;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-.aNavList:hover:not(.active) {
-  background-color: #111;
-}
+
 #jb-header {
   /* margin-top: 10px;
 margin-bottom: 20px; */
