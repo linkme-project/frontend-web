@@ -20,7 +20,7 @@ export default window.App = {
   },
   methods: {
     onFidoAuth (type, result) {
-      // global 
+      // global
       window.alert(type + ' ' + result)
     }
   }

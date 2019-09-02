@@ -6,150 +6,178 @@
       class="slide-tabs"
       height="40px"
     >
-      <v-tab style="font-size: 15px;">
+      <v-tab to="/">
         추천
       </v-tab>
-      <v-tab>
+      <v-tab to="/not-provided">
         얼리버드
       </v-tab>
-      <v-tab>
+      <v-tab to="/not-provided">
         기획전
       </v-tab>
-      <v-tab>
+      <v-tab to="/not-provided">
         트렌드
       </v-tab>
-      <v-tab>
+      <v-tab to="/not-provided">
         메이커
       </v-tab>
     </v-tabs>
-    <div id="jb-header">
-      <carousel :data="imageSlide"></carousel>
+    <div style="height: 260px;">
+      <carousel :data="imageSlide" :indicators="false" style="background-color: #44484b; height:200px;"></carousel>
+      <div class="invest-alert">
+        <b>[투자위험고지]</b> 비상장기업 투자는 원금 손실의 가능성이 크니 <br />
+        <span style="text-decoration: underline;">투자 위험 안내</span>를 꼭 확인하세요.
+      </div>
     </div>
     <div id="jb-container">
       <h2>이 펀딩 어때요?</h2>
       <div id="fundImgListContent">
-        <div class="fundImg" id="fundImg_1">
+        <div class="fundImg">
           <div class="eachFundImgDiv">
-            <img src="static/images/banner.jpg" class="eachFundImg" id="adver">
+            <img src="static/images/invest-1.png" class="eachFundImg" id="adver">
             <div class="fundText">
-              액정보호 필름 붙일 때마다 소심이가 된다면?
+              약 7,600억원 추정 규모의 위폐감별기 시장을 잡아라!
+            </div>
+            <div>
+              <span style="color: #00a2a2; font-size: 12px;"><b>240%</b></span>
+              <span style="font-size:13px; color: #90949c;">투자</span>
             </div>
           </div>
         </div>
         <div class="fundImg">
           <div class="eachFundImgDiv">
-            <img src="static/images/card.jpg" class="eachFundImg" id="adver">
-            <div class="fundText">카드 한판 칩시다.</div>
+            <img src="static/images/invest-2.png" class="eachFundImg" id="adver">
+            <div class="fundText">[연13% 6개월] N사 실검의 주인공 푸드스미스</div>
+            <div>
+              <span style="color: #00a2a2; font-size: 12px;"><b>89%</b></span>
+              <span style="font-size:13px; color: #90949c;">투자</span>
+            </div>
           </div>
         </div>
         <div class="fundImg">
           <div class="eachFundImgDiv">
-            <img src="static/images/couple.jpg" class="eachFundImg" id="adver">
-      			<div class="fundText">시간의 소중함</div>
+            <img src="static/images/invest-3.png" class="eachFundImg" id="adver">
+      			<div class="fundText">초음파 세척기 아직 모르시나요? 세균 제거 99.7%오염 완벽 세척!</div>
+            <div>
+              <span style="color: #00a2a2; font-size: 12px;"><b>157%</b></span>
+              <span style="font-size:13px; color: #90949c;">리워드</span>
+            </div>
       		</div>
       	</div>
       	<div class="fundImg">
       		<div class="eachFundImgDiv">
-            <img src="static/images/smtm.png" class="eachFundImg" id="adver">
-      			<div class="fundText">재미지죠 이렇게 특가 할인이 없답니다.</div>
+            <img src="static/images/invest-4.png" class="eachFundImg" id="adver">
+      			<div class="fundText">[연13% 6개월] N사 실검의 주인공 푸드스미스</div>
+            <div>
+              <span style="color: #00a2a2; font-size: 12px;"><b>240%</b></span>
+              <span style="font-size:13px; color: #90949c;">리워드</span>
+            </div>
       		</div>
       	</div>
-      	<div class="fundImg">
-      		<div class="eachFundImgDiv">
-            <img src="static/images/happy1.png" class="eachFundImg" id="adver">
-      			<div class="fundText">재미지죠 이렇게 특가 할인이 없답니다.</div>
-      		</div>
-      	</div>
-        <div class="fundImg">
-          <div class="eachFundImgDiv">
-            <img src="static/images/happy2.jpg" class="eachFundImg" id="adver">
-            <div class="fundText">재미지죠 이렇게 특가 할인이 없답니다.</div>
+      </div>
+      <div class="event">
+        <img src="static/images/event-1.png" style="width: 100%;border: 1px solid #eee; margin-right: 8px;">
+        <div style="font-size: 14px; margin: 8px 0px 30px 0px; display: flex; vertical-align: center;">
+          <span style="font-size: 10px; border: 1px solid #eee; margin-right: 8px; padding: 2px;">기획전</span> 어른이를 위한 신박템
+        </div>
+      </div>
+      <div>
+        <h2 style="margin-bottom: 16px;">실시간 랭킹</h2>
+        <div class="ranking">
+          <span style="padding: 0px 12px 0px 4px; font-size: 18px;"><b>1</b></span>
+          <div style="font-size: 15px; padding-right: 12px;">UberEats시키면,스윙타고 온다ㅣ공유킥보드 Top3기업 <br />
+            <span style="color: #00a2a2; font-size: 12px;"><b>240%</b></span>
+            <span style="font-size:13px; color: #90949c;">리워드</span>
           </div>
-      	</div>
+          <div><img src="static/images/list-1.png" style="height: 66px;"></div>
+        </div>
+        <div class="ranking">
+          <span style="padding: 0px 12px 0px 4px; font-size: 18px;"><b>2</b></span>
+          <div style="font-size: 15px; padding-right: 12px;">[연13% 6개월] N사 실검의 주인공 푸드스미스 <br />
+            <span style="color: #00a2a2; font-size: 12px;"><b>240%</b></span>
+            <span style="font-size:13px; color: #90949c;">리워드</span>
+          </div>
+          <div><img src="static/images/list-2.png" style="height: 66px;"></div>
+        </div>
+        <div class="ranking">
+          <span style="padding: 0px 12px 0px 4px; font-size: 18px;"><b>3</b></span>
+          <div style="font-size: 15px; padding-right: 12px;">5천에서 시작해서 75억 매출로!ㅣ 김치찌개 1위 브랜드 <br />
+            <span style="color: #00a2a2; font-size: 12px;"><b>240%</b></span>
+            <span style="font-size:13px; color: #90949c;">리워드</span>
+          </div>
+          <div><img src="static/images/list-3.png" style="height: 66px;"></div>
+        </div>
+        <div class="ranking">
+          <span style="padding: 0px 12px 0px 4px; font-size: 18px;"><b>4</b></span>
+          <div style="font-size: 15px; padding-right: 12px;">연15%ㅣ5분만에 100%달성!특허기술로 중동진출까지?! <br />
+            <span style="color: #00a2a2; font-size: 12px;"><b>240%</b></span>
+            <span style="font-size:13px; color: #90949c;">리워드</span>
+          </div>
+          <div><img src="static/images/list-4.png" style="height: 66px;"></div>
+        </div>
+        <div class="ranking">
+          <span style="padding: 0px 12px 0px 4px; font-size: 18px;"><b>5</b></span>
+          <div style="font-size: 15px; padding-right: 12px;">CJ부터 오뚜기까지!ㅣ18억 매출 달성한 계측기 강소기업 <br />
+            <span style="color: #00a2a2; font-size: 12px;"><b>240%</b></span>
+            <span style="font-size:13px; color: #90949c;">리워드</span>
+          </div>
+          <div><img src="static/images/list-5.png" style="height: 66px;"></div>
+        </div>
       </div>
-      <div id="liveRank">
-        <h2>실시간 랭킹</h2>
-        <ul>
-          <li>
-            <div class="liveRankList">
-              <span class="spanLiveRank">1</span>
-              <div class="divLiveRank">[7차 6억 신화] 이미 생성된 기미, 잡티를 제거 #미백+수분 폭탄</div>
-              <div><img src="static/images/smtm.png" class="imgLiveRank" id=""></div>
-            </div>
-          </li>
-          <li>
-            <div class="liveRankList">
-              <span class="spanLiveRank">2</span>
-              <div class="divLiveRank">[팬톤]파워뱅크 블루투스 이어폰에 팬톤의 고급진 색감을 끼얹다.</div>
-              <div><img src="static/images/happy2.jpg" class="imgLiveRank" id=""></div>
-            </div>
-          </li>
-          <li>
-            <div class="liveRankList">
-            <span class="spanLiveRank">3</span>
-              <div class="divLiveRank">[2억앵콜] 답답한 허리, 파스도 답이 없다면 전문가 손길 룸바냅이 정답</div>
-              <div><img src="static/images/happy1.png" class="imgLiveRank" id=""></div>
-            </div>
-          </li>
-          <li>
-            <div class="liveRankList">
-              <span class="spanLiveRank">4</span>
-              <div class="divLiveRank">[제주품은 젤라또] 이 쫀쫀함, 참을 수 있을까?</div>
-              <div><img src="static/images/card.jpg" class="imgLiveRank" id=""></div>
-            </div>
-          </li>
-          <li>
-            <div class="liveRankList">
-              <span class="spanLiveRank">5</span>
-              <div class="divLiveRank">[7차 6억 신화] 이미 생성된 기미, 잡티를 제거 #미백+수분 폭탄</div>
-              <div><img src="static/images/happy3.png" class="imgLiveRank" id=""></div>
-            </div>
-          </li>
-        </ul>
+      <div style="font-size: 14px; margin: 20px 0px; text-align: center;">
+        <img src="static/images/event-2.png" style="width: 95%; border: 2px solid #eee;">
       </div>
-
       <div id="jb-content">
         <h2>최근 등록한 펀드</h2>
-        <div class="recentFund">
-        	<div class="eachFundImgDiv"><img src="static/images/card.jpg" class="eachFundImg" id="adver">
-      			<div class="fundText">재미지죠 이렇게 특가 할인이 없답니다.</div>
-      		</div>
-        </div>
-        <div class="recentFund">
-        	<div class="eachFundImgDiv"><img src="/static/images/happy3.png" class="eachFundImg" id="adver">
-      			<div class="fundText">재밌는 드라마 곧 마감!</div>
-      		</div>
-        </div>
-        <div class="recentFund">
-        	<div class="eachFundImgDiv"><img src="static/images/happy1.png" class="eachFundImg" id="adver">
-      			<div class="fundText">가자 완벽한 무결점 무선 충전 거치대</div>
-      		</div>
-        </div>
-        <div class="recentFund">
-        	<div class="eachFundImgDiv"><img src="static/images/happy2.jpg" class="eachFundImg" id="adver">
-      			<div class="fundText">주머니에 쏙, 10미터 셀카 무선 리시버</div>
-      		</div>
-        </div>
-      </div>
-
-      <div id="magamFund">
-        <img src="static/images/banner.jpg" alt="Norway" id="imgMagamFund">
-        <div class="container">
-          <div class="my-2">
-            <v-btn
-              color="#00c4c4"
-              to="/login"
-              dark
-              large
-              depressed
-              min-width="20px"
-              height="35px"
-              style="font-size: 15px;"
-            >
-                              바로가기
-            </v-btn>
+        <div id="fundImgListContent">
+          <div class="fundImg">
+            <div class="eachFundImgDiv">
+              <img src="static/images/invest-1.png" class="eachFundImg" id="adver">
+              <div class="fundText">
+                약 7,600억원 추정 규모의 위폐감별기 시장을 잡아라!
+              </div>
+              <div>
+                <span style="color: #00a2a2; font-size: 12px;"><b>240%</b></span>
+                <span style="font-size:13px; color: #90949c;">투자</span>
+              </div>
+            </div>
+          </div>
+          <div class="fundImg">
+            <div class="eachFundImgDiv">
+              <img src="static/images/invest-2.png" class="eachFundImg" id="adver">
+              <div class="fundText">[연13% 6개월] N사 실검의 주인공 푸드스미스</div>
+              <div>
+                <span style="color: #00a2a2; font-size: 12px;"><b>89%</b></span>
+                <span style="font-size:13px; color: #90949c;">투자</span>
+              </div>
+            </div>
+          </div>
+          <div class="fundImg">
+            <div class="eachFundImgDiv">
+              <img src="static/images/invest-3.png" class="eachFundImg" id="adver">
+              <div class="fundText">초음파 세척기 아직 모르시나요? 세균 제거 99.7%오염 완벽 세척!</div>
+              <div>
+                <span style="color: #00a2a2; font-size: 12px;"><b>157%</b></span>
+                <span style="font-size:13px; color: #90949c;">리워드</span>
+              </div>
+            </div>
+          </div>
+          <div class="fundImg">
+            <div class="eachFundImgDiv">
+              <img src="static/images/invest-4.png" class="eachFundImg" id="adver">
+              <div class="fundText">[연13% 6개월] N사 실검의 주인공 푸드스미스</div>
+              <div>
+                <span style="color: #00a2a2; font-size: 12px;"><b>240%</b></span>
+                <span style="font-size:13px; color: #90949c;">리워드</span>
+              </div>
+            </div>
           </div>
         </div>
+      </div>
+      <div style="font-size: 13px; margin: 24px 0px 12px 0px;">
+        <h2>팔로잉 친구들로부터</h2>
+        <h2>멋진 친구를 찾아보세요</h2>
+        <img src="static/images/event-3.png" style="width: 95%; margin: 8px 0px;">
       </div>
     </div>
     <prd-footer/>
@@ -164,13 +192,19 @@ import bottomNav from '../components/BottomNavigation'
 
 // 데이터 렌더링 가져오기
 export default {
-  name: 'HelloWorld',
+  name: 'Main',
   data () {
     return {
       imageSlide: [
-        '<img src="static/images/와디즈_캡쳐_1.png" class="eachFundImg" id="adver"/>',
-        '<img src="static/images/와디즈_캡쳐_2.png" class="eachFundImg" id="adver"/>',
-        '<img src="static/images/와디즈_캡쳐_3.png" class="eachFundImg" id="adver"/>'
+        '<img src="static/images/carousel-1.png" width="100%" id="adver"/>',
+        '<img src="static/images/carousel-2.png" width="100%" id="adver"/>',
+        '<img src="static/images/carousel-3.png" width="100%" id="adver"/>',
+        '<img src="static/images/carousel-4.png" width="100%" id="adver"/>',
+        '<img src="static/images/carousel-5.png" width="100%" id="adver"/>',
+        '<img src="static/images/carousel-6.png" width="100%" id="adver"/>',
+        '<img src="static/images/carousel-7.png" width="100%" id="adver"/>',
+        '<img src="static/images/carousel-8.png" width="100%" id="adver"/>',
+        '<img src="static/images/carousel-9.png" width="100%" id="adver"/>'
       ]
     }
   },
@@ -178,12 +212,8 @@ export default {
     'prd-footer': footer,
     'bottom-navigator': bottomNav
   },
-  created: function () {
-    // window.LinkMeApp.regFido()
-  },
   methods: {
     ajaxTest: function () {
-      console.log('나오냐')
       axios.get('/vueList')
         .then(res => {
           console.log(res.data)
@@ -192,216 +222,49 @@ export default {
         })
     }
   }
-  // ajax 개념 vue 문법을 활용하여 controller로 접
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.invest-alert {
+  background-color: #44484b;
+  color: #fff;
+  padding: 16px 16px 12px 16px;
+  font-size: 12px;
+}
 .wrapper {
   text-align: start;
 }
-body{
-  margin: 0px;
-}
 #jb-container {
   width: auto;
-  padding: 20px;
-  padding-top: 50px;
-}
-/* 네비게이션 스타일 */
-.ulNavList {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #fff;
-}
-.liNavList {
-  float: left;
-  width: 190px;
-}
-.aNavList {
-  display: block;
-  color: #7b7b7b;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-.aNavList:hover:not(.active) {
-  background-color: #111;
-}
-#jb-header {
-  /* margin-top: 10px;
-  margin-bottom: 20px; */
-  border: 1px solid #bcbcbc;
-  height: 350px;
+  padding: 12px;
+  margin-top: 12px;
 }
 #fundImgListContent {
+  margin: 14px 0px;
   display: grid;
   grid-template-columns: repeat(2,1fr);
-  grid-row-gap: 12px;
-  grid-column-gap: 8px;
-  margin-bottom: 20px;
+  grid-row-gap: 16px;
+  grid-column-gap: 12px;
 }
 .fundImg{
-  width: 200px;
-  padding: 20px;
-  float: left;
-/* 		    border: 1px solid #bcbcbc; */
-  height: 140px;
+  width: 100%;
 }
 .eachFundImg{
   width: 100%;
-  height: 85%;
 }
 .eachFundImgDiv{
-  height: 95%;
+  height: 100%;
 }
-ul{
-  list-style:none;
-  padding-left: 0px;
+.fundText {
+  font-size: 14px;
+  display:-webkit-box;
+  -webkit-line-clamp:2;
+  -webkit-box-orient:vertical;
+  overflow:hidden;
+  text-overflow:ellipsis;
 }
-h2{
-  margin: 0px;
-  margin-bottom: 8px;
-}
-#liveRank {
-  width: 450px;
-  padding: 5px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  margin-bottom: 20px;
-  float: right;
-/* 		    border: 1px solid #bcbcbc; */
-  height: 420px;
-}
-/* 실시간 랭킹 */
-.liveRankList{
-  width: auto;
-  padding: 10px;
-  height: 70px;
-  /* border: 1px solid #bcbcbc; */
-}
-.spanLiveRank{
-  float: left;
-  font-size: 26px;
-  font-weight: bold;
-  margin-right: 6px;
-}
-.divLiveRank{
-  float: left;
-  width: 310px;
-  font-size: 13px;
-}
-.imgLiveRank{
-  width: 88px;
-  height: 55px;
-}
-#jb-content {
-  width: auto;
-/*         padding: 20px; */
-  margin-bottom: 20px;
-  float: left;
-/*         border: 1px solid #bcbcbc; */
-}
-.recentFund {
-    width: 24%;
-    float: left;
-    padding: 10px 5px 10px 5px;
-  }
-#magamFund {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  text-align: center;
-  clear: both;
-}
-#imgMagamFund{
-  width: 1222px;
-  height: 309px;
-}
-@media ( max-width: 480px ) {
-  #jb-container {
-    width: auto;
-    padding-top: 20px;
-  }
-  #jb-header {
-    /* margin-top: 10px;
-    margin-bottom: 20px; */
-    border: 1px solid #bcbcbc;
-    height: 225px;
-  }
-  .liNavList{
-    width: 93px;
-  }
-  #fundImgListContent {
-    float: none;
-    width: auto;
-    height: 480px;
-  }
-  .fundImg{
-    width: 167px;
-    padding: 5px;
-    float: left;
-/* 			    border: 1px solid #bcbcbc; */
-    height: 140px;
-  }
-  .fundText{
-    font-size: 11px;
-    font-weight: bold;
-  }
-  ul{
-    list-style:none;
-    padding-left: 0px;
-  }
-  h2{
-    margin: 0px;
-    margin-bottom: 8px;
-  }
-  /* 실시간 랭킹 모바일 */
-  #liveRank {
-    float: none;
-    width: auto;
-    padding-left:0px;
-    padding-right:0px;
-    height: 360px;
-  }
-  .liveRankList{
-    width: auto;
-    padding: 10px;
-    height: 60px;
-    /* border: 1px solid #bcbcbc; */
-  }
-  .divLiveRank{
-  float: left;
-  width: 203px;
-  font-size: 13px;
-  }
-  .imgLiveRank{
-    width: 80px;
-    height: 55px;
-  }
-  #jb-content {
-    float: none;
-    width: auto;
-    height: 340px;
-  }
-  .recentFund {
-    width: 167px;
-    padding: 5px;
-    float: left;
-    height: 140px;
-  }
-  #imgMagamFund{
-    width: 335px;
-    height: 200px;
-  }
-  #magamFund{
-    width: 335px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    text-align: center;
-  }
-  div.container {
-    padding: 10px;
-  }
+.ranking {
+  display: inline-flex;
 }
 </style>
