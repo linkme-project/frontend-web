@@ -1,28 +1,13 @@
 
 <template>
   <div class="hello">
-    <div id="jb-navList">
-      <ul class="ulNavList">
-        <li class="liNavList">
-          <a class="aNavList" href="#home">Home</a>
-        </li>
-        <li class="liNavList">
-          <a class="aNavList" href="#news">News</a>
-        </li>
-        <li class="liNavList">
-          <a class="aNavList" href="#contact">Contact</a>
-        </li>
-        <li class="liNavList">
-          <a class="aNavList" href="#about">About</a>
-        </li>
-      </ul>
-    </div>
+    <prd-header />
     <div id="jb-header">
       <img src="static/images/와디즈 캡쳐_1.png" class="eachFundImg" id="adver" />
     </div>
     <div id="jb-container">
       <div id="prdDetailTitle">
-        <h2>밀폐된 차, 환김 소한 방 모두 | 필터 스펙 인증이 다른 공기청정기</h2>
+        <h2>약 7,600억원 추정 규모의 위폐감별기 시장을 잡아라!</h2>
       </div>
       <div
         id="prdDetailExplain"
@@ -70,6 +55,8 @@
 <script>
 import axios from 'axios'
 import footer from '../components/FooterInPage'
+import productHeader from '../components/PrdHeader'
+
 // 데이터 렌더링 가져오기
 export default {
   name: 'HelloWorld',
@@ -83,7 +70,8 @@ export default {
     }
   },
   components: {
-    'prd-footer': footer
+    'prd-footer': footer,
+    'prd-header': productHeader
   },
   created: function () {},
   methods: {
