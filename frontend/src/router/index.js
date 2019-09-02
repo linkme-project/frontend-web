@@ -79,7 +79,11 @@ export default new Router({
     {path: '/prdHeader/detail/:prdCd', component: PrdDetail},
     {path: '/prdHeader/prdSearch', component: PrdSearch},
     {path: '/prdHeader/prdList/:prdNm', component: PrdList},
-    {path: '/prdHeader/MyFundInfo', component: MyFundInfo}
+    {path: '/prdHeader/MyFundInfo', component: MyFundInfo},
+    {
+      path: '/product-detail',
+      component: PrdDetail
+    }
 
   ]
 })
