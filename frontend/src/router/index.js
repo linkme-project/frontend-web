@@ -12,6 +12,7 @@ import NotProvided from '@/pages/NotProvided'
 import Invest from '@/pages/Invest'
 
 import PrdDetail from '@/pages/PrdDetail'
+import PrdDetail2 from '@/pages/PrdDetail-2'
 import PrdSearch from '@/pages/PrdSearch'
 import PrdList from '@/pages/PrdList'
 import MyFundInfo from '@/pages/MyFundInfo'
@@ -83,7 +84,10 @@ export default new Router({
     {
       path: '/product-detail',
       component: PrdDetail
+    },
+    {
+      path: '/product-detail-2',
+      component: PrdDetail2
     }
-
   ]
 })

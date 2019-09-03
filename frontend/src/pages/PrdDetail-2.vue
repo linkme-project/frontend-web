@@ -1,22 +1,22 @@
 
 <template>
   <div class="wrapper">
-    <prd-header message="약 7,600억원 추정 규모의 위폐감별기 시장을 잡아라! | 링크미 투자 - 크라우드펀딩"/>
+    <prd-header message="[연 13% 6개월] N사 실검의 주인공 푸드스미스"/>
     <div style="margin-bottom: 26px;">
-      <img src="static/images/detail-1.png" style="width: 100%;" class="eachFundImg" id="adver" />
+      <img src="static/images/detail-6.png" style="width: 100%;" class="eachFundImg" id="adver" />
     </div>
     <div class="product-content">
       <div style="margin-bottom: 12px;">
         <div style="margin-bottom: 6px;">
           <label style="font-size: 18px; color: #1d2129;">
-            <strong>28,294,840원 달성</strong>
+            <strong>125,300,000원 달성</strong>
           </label>
-          <span style="font-size: 13px; color: #90949c">목표금액 50,001,080원 <b>57%</b></span>
+          <span style="font-size: 13px; color: #90949c">목표금액 50,000,000원 <b>251%</b></span>
         </div>
-        <label style="font-size: 18px; color: #1d2129;"><strong>16일 남음</strong></label> <span style="font-size: 13px; color: #90949c">2019.09.20 15:00 마감</span> <br />
+        <label style="font-size: 18px; color: #1d2129;"><strong>12일 남음</strong></label> <span style="font-size: 13px; color: #90949c">2019.09.16 15:00 마감</span> <br />
         <div style="margin-top: 12px;">
-          <span style="font-size: 10px; border: 1px solid #eee; margin-right: 4px; padding: 2px;">증액예정</span>
-          <span style="font-size: 12px; color: #90949c">모집상황에 따라 최대 200,000,984원으로 증액 예정입니다.</span>
+          <span style="font-size: 10px; border: 1px solid #eee; margin-right: 4px; padding: 2px;">증액</span>
+          <span style="font-size: 12px; color: #90949c">목표금액을 50,000,000원으로 증액하였습니다.</span>
         </div>
       </div>
       <v-divider />
@@ -28,7 +28,7 @@
       </div>
       <v-divider />
       <div style="margin-top: 8px;">
-        <img src="static/images/detail-4.png" width="100%"/>
+        <img src="static/images/detail-7.png" width="100%"/>
       </div>
       <v-divider />
       <div style="margin-top: 8px;">

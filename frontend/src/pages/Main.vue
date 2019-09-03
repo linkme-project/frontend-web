@@ -46,7 +46,7 @@
             </div>
           </div>
         </router-link>
-        <router-link to="/product-detail">
+        <router-link to="/product-detail-2">
           <div class="fundImg">
             <div class="eachFundImgDiv">
               <img src="static/images/invest-2.png" class="eachFundImg" id="adver">
@@ -58,7 +58,7 @@
             </div>
           </div>
         </router-link>
-        <router-link to="/product-detail">
+        <router-link to="/not-provided">
           <div class="fundImg">
             <div class="eachFundImgDiv">
               <img src="static/images/invest-3.png" class="eachFundImg" id="adver">
@@ -70,7 +70,7 @@
             </div>
           </div>
         </router-link>
-        <router-link to="/product-detail">
+        <router-link to="/not-provided">
           <div class="fundImg">
             <div class="eachFundImgDiv">
               <img src="static/images/invest-4.png" class="eachFundImg" id="adver">
