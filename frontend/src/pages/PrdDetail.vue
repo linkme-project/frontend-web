@@ -7,50 +7,45 @@
     </div>
     <div class="product-content">
       <div style="margin-bottom: 12px;">
-        <label style="font-size: 19px; color: #1d2129;"><strong>28,294,840 원 달성</strong></label> <span style="font-size: 13px; color: #90949c">목표금액 50,001,080원 <b>57%</b></span> <br />
-        <label style="font-size: 19px; color: #1d2129;"><strong>17일 남음</strong></label> <span style="font-size: 13px; color: #90949c">2019.09.20 15:00 마감</span> <br />
+        <div style="margin-bottom: 6px;">
+          <label style="font-size: 18px; color: #1d2129;">
+            <strong>28,294,840원 달성</strong>
+          </label>
+          <span style="font-size: 13px; color: #90949c">목표금액 50,001,080원 <b>57%</b></span>
+        </div>
+        <label style="font-size: 18px; color: #1d2129;"><strong>16일 남음</strong></label> <span style="font-size: 13px; color: #90949c">2019.09.20 15:00 마감</span> <br />
         <div style="margin-top: 12px;">
           <span style="font-size: 10px; border: 1px solid #eee; margin-right: 4px; padding: 2px;">증액예정</span>
-          <span style="font-size: 12px; color: #90949c">모집 상황에 따라 최대 200,000,984원으로 증액 예정입니다.</span>
+          <span style="font-size: 12px; color: #90949c">모집상황에 따라 최대 200,000,984원으로 증액 예정입니다.</span>
         </div>
       </div>
       <v-divider />
-      <div
-        id="prdDetailExplain"
-      >쏟을 걱정 노! 손은 핸들 위로! 1+1컵홀더 - 컵플러스' 의 문제점을 모두 개선한 ★차량필수템★ 공간을 똑똑하게 쓰는 3in1 컵홀더! 트레이&무선충전까지</div>
+      <div style="margin-top: 18px; font-size: 12px; margin-bottom: 4px;">
+      매력도 평가
+      </div>
+      <div style="margin-bottom: 8px;">
+        <img src="static/images/detail-2.png" width="80%"/>
+      </div>
+      <v-divider />
+      <div style="margin-top: 8px;">
+        <img src="static/images/detail-4.png" width="100%"/>
+      </div>
+      <v-divider />
+      <div style="margin-top: 8px;">
+        <img src="static/images/detail-5.png" width="100%"/>
+      </div>
       <div id="prdDetailDayInfo">
-        <div id="magamTime">22일 남음</div>
-        <hr style="border: 1px solid #00cca3;" />
-        <div id="fundMoney">5,787,400원 펀딩</div>
-        <div id="supporter">76명의 서포터</div>
         <div class="my-2" id="btnFunding">
           <v-btn
-            color="#00c4c4"
+            color="#557cf2"
             dark
             large
             depressed
-            min-width="335px"
+            width="100%"
             height="45px"
-            style="margin-top: 12px; font-size: 21px;"
+            style="margin-top: 12px; font-size: 20px; font-weight: 400;"
             v-on:click="prdInsertFunc()"
-          >펀딩하기</v-btn>
-        </div>
-      </div>
-      <div id="magamFund">
-        <img src="images/banner.jpg" alt="Norway" id="imgMagamFund" />
-        <div class="container">
-          <div class="my-2">
-            <v-btn
-              color="#00c4c4"
-              to="/login"
-              dark
-              large
-              depressed
-              min-width="20px"
-              height="35px"
-              style="font-size: 15px;"
-            >다른 펀드 보기</v-btn>
-          </div>
+          >지금 투자하기</v-btn>
         </div>
       </div>
     </div>
