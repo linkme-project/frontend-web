@@ -48,10 +48,6 @@ export default window.App = {
   },
   methods: {
     onFidoAuth (type, result) {
-      window.alert(store)
-      store.commit('login')
-      router.push('/')
-
       // global
       if (type === 0) { // reg
         if (result) {
@@ -60,11 +56,11 @@ export default window.App = {
           this.message = '지문 등록을 실패하였습니다'
         }
       } else if (type === 1) { // auth
-        this.$store.commit('login')
+        store.commit('login')
+        router.push('/')
       } else {
         //
       }
-      this.$router.push('/')
     }
   }
 }
