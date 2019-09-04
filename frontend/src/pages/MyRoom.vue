@@ -137,6 +137,7 @@ export default {
       this.spinnerKey = 'showSpinner'
       this.$nextTick(() => {
         setTimeout(() => {
+          this.$store.commit('close')
           this.$store.commit('logout')
           this.$router.push('/')
         }, 1000)

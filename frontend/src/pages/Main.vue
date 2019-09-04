@@ -188,6 +188,28 @@
         <img src="static/images/event-3.png" style="width: 95%; margin: 8px 0px;">
       </div>
     </div>
+    <v-dialog
+        v-model="dialog"
+        max-width="290"
+      >
+        <v-card>
+          <v-card-title class="headline" style="justify-content: center;">{{ loginTitle }}</v-card-title>
+
+          <v-card-text>
+            {{ loginMessage }}
+          </v-card-text>
+
+          <v-card-actions style="justify-content: center;">
+            <v-btn
+              color="green darken-1"
+              text
+              @click="dialog = false"
+            >
+              확인
+            </v-btn>
+          </v-card-actions>
+        </v-card>
+      </v-dialog>
     <prd-footer/>
     <bottom-navigator />
   </div>
@@ -213,12 +235,21 @@ export default {
         '<img src="static/images/carousel-7.png" width="100%" id="adver"/>',
         '<img src="static/images/carousel-8.png" width="100%" id="adver"/>',
         '<img src="static/images/carousel-9.png" width="100%" id="adver"/>'
-      ]
+      ],
+      dialog: false,
+      loginTitle: '',
+      loginMessage: ''
     }
   },
   components: {
     'prd-footer': footer,
     'bottom-navigator': bottomNav
+  },
+  mounted () {
+    if (this.$store.state.isLogin) {
+      this.openDialog('로그인 성공', '임근학님 환영합니다')
+      this.$store.commit('close')
+    }
   },
   methods: {
     ajaxTest: function () {
@@ -230,8 +261,13 @@ export default {
         })
     },
     moveToDetail () {
-      console.log('text')
-    }
+      console.log('test')
+    },
+    openDialog (title, message) {
+      this.loginTitle = title
+      this.loginMessage = message
+      this.dialog = true
+    },
   }
 }
 </script>

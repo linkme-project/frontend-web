@@ -218,10 +218,7 @@ export default {
       if (window.LinkMeApp) {
         window.LinkMeApp.authFido()
         setTimeout(() => {
-          this.openDialog('로그인 성공', '임근학님 환영합니다')
-          setTimeout(() => {
-            this.$router.push('/')
-          }, 1000)
+          this.$router.push('/')
         }, 1500)
       }
       this.fidoDialog = false

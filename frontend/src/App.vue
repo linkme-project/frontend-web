@@ -10,6 +10,7 @@
 import footer from '@/components/FooterInPage'
 import header from '@/components/Header'
 // import alert from '@/components/Alert'
+import store from '@/plugins/store'
 
 export default window.App = {
   name: 'App',
@@ -39,10 +40,12 @@ export default window.App = {
       } else if (type === 1) { // auth
         // this.alert = true
         // this.message = '로그인 하였습니다'
-        // store.commit('login')
+        store.commit('login')
+        store.commit('open')
         // setTimeout(() => {
         //  router.push('/')
         // }, 2000)
+        
         return true
       } else {
         //
