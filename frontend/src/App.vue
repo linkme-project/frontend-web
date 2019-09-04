@@ -50,23 +50,24 @@ export default window.App = {
     onFidoAuth (type, result) {
       if (type === 0) { // reg
         if (result) {
-          window.alert('지문 등록이 완료되었습니다')
-          // this.message = '지문 등록이 완료되었습니다'
+          // window.alert('지문 등록이 완료되었습니다')
+          this.message = '지문 등록이 완료되었습니다'
         } else {
-          window.alert('지문 등록을 실패하였습니다')
-          // this.message = '지문 등록을 실패하였습니다'
+          // window.alert('지문 등록을 실패하였습니다')
+          this.message = '지문 등록을 실패하였습니다'
         }
       } else if (type === 1) { // auth
-        window.alert('임근학 님이 로그인 하였습니다')
+        // window.alert('임근학 님이 로그인 하였습니다')
         setTimeout(() => {
           store.commit('login')
           router.push('/')
         }, 1000)
-        // this.message = '로그인 하였습니다'
+        this.message = '로그인 하였습니다'
       } else {
         //
       }
-      // this.alert = true
+      this.alert = true
+      window.alert(this.alert + ' ' + this.message)
     },
     moveToHome () {
       store.commit('login')
