@@ -54,9 +54,7 @@ export default window.App = {
           this.message = '지문 등록을 실패하였습니다'
         }
       } else if (type === 1) { // auth
-        this.$nextTick(() => {
-          this.$store.commit('login')
-        })
+        this.$store.commit('login')
       } else {
         //
       }
