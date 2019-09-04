@@ -3,6 +3,26 @@
     <!-- <custom-alert /> -->
     <custom-header />
     <router-view style="margin-top: 48px;"/>
+    <v-dialog
+      v-model="alert"
+      max-width="290"
+    >
+      <v-card>
+        <v-card-text>
+          {{ message }}
+        </v-card-text>
+
+        <v-card-actions style="justify-content: center;">
+          <v-btn
+            color="green darken-1"
+            text
+            @click="alert = false"
+          >
+            확인
+          </v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
   </div>
 </template>
 
@@ -13,6 +33,12 @@ import header from '@/components/Header'
 
 export default window.App = {
   name: 'App',
+  data () {
+    return {
+      alert: false,
+      message: ''
+    }
+  },
   components: {
     // 'custom-alert': alert,
     'custom-footer': footer,
@@ -20,10 +46,22 @@ export default window.App = {
   },
   methods: {
     onFidoAuth (type, result) {
-      window.alert(type + ' ' + result)
       // global
-      this.$store.commit('login')
+      if (type === 0) { // reg
+        if (result) {
+          this.message = '지문 등록이 완료되었습니다'
+        } else {
+          this.message = '지문 등록을 실패하였습니다'
+        }
+      } else if (type === 1) { // auth
+        this.$nextTick(() => {
+          this.$store.commit('login')
+        })
+      } else {
+        //
+      }
       this.$router.push('/')
+      window.alert(this.$store.state.isLogin)
     }
   }
 }
