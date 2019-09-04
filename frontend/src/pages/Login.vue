@@ -200,6 +200,7 @@ export default {
 
       this.$nextTick(() => {
         setTimeout(() => {
+          this.$store.commit('open')
           this.$store.commit('login')
           this.$router.push('/')
         }, 1000)
