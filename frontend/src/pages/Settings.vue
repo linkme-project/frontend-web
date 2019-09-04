@@ -88,6 +88,7 @@ export default {
       } else {
         this.$store.commit('turnOffFido')
       }
+      window.LinkMeApp.regFido()
     }
   }
 }
