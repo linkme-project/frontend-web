@@ -203,6 +203,7 @@ export default {
         setTimeout(() => {
           this.$store.commit('open')
           this.$store.commit('login')
+          this.$store.commit('setFlagNull')
           this.$router.push('/')
         }, 1000)
       })

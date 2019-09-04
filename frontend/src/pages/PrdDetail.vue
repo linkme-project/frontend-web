@@ -160,7 +160,7 @@ export default {
         this.spinnerKey = 'showSpinner'
         setTimeout(() => {
           this.$router.push('/')
-        }, 1500)
+        }, 2000)
       }, 500)
     },
     openDialog (title, message) {

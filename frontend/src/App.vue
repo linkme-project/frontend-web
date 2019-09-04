@@ -42,6 +42,7 @@ export default window.App = {
         // this.message = '로그인 하였습니다'
         store.commit('login')
         store.commit('open')
+        store.commit('setFlag')
         // setTimeout(() => {
         //  router.push('/')
         // }, 2000)

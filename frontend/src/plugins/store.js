@@ -11,7 +11,8 @@ export default new Vuex.Store({
     openDialog: false, // login
     openDialog2: false, // parchase
     openDialog3: false, // logout
-    buyProduct: false
+    buyProduct: false,
+    flag: null
   },
   mutations: {
     login (state) {
@@ -46,6 +47,12 @@ export default new Vuex.Store({
     },
     buy (state) {
       state.buyProduct = true
+    },
+    setFlag (state) {
+      state.flag = 'ddd'
+    },
+    setFlagNull (state) {
+      state.flag = null
     }
   }
 })

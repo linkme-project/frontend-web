@@ -139,6 +139,7 @@ export default {
       this.$nextTick(() => {
         setTimeout(() => {
           this.$store.commit('open3')
+          this.$store.commit('setFlagNull')
           this.$store.commit('logout')
           this.$router.push('/')
         }, 1000)
