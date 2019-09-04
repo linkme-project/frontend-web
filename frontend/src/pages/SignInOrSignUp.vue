@@ -33,6 +33,9 @@ export default {
   data () {
     return {
     }
+  },
+  mounted () {
+    scrollTo(0, 0)
   }
 }
 </script>

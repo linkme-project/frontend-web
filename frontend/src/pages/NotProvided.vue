@@ -26,6 +26,9 @@ export default {
     return {
     }
   },
+  mounted () {
+    scrollTo(0, 0)
+  },
   methods: {
     moveBack () {
       this.$router.go(-1)

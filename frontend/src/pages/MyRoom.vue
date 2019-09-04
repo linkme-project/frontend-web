@@ -127,6 +127,7 @@ export default {
     Spinner
   },
   mounted () {
+    scrollTo(0, 0)
     if (!this.$store.state.isLogin) {
       this.$router.push('/sign-in-or-sign-up')
     }

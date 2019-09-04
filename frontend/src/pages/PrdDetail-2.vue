@@ -74,7 +74,9 @@ export default {
     'prd-footer': footer,
     'prd-header': productHeader
   },
-  created: function () {},
+  mounted: function () {
+    scrollTo(0, 0)
+  },
   methods: {
     ajaxTest: function () {
       console.log('나오냐')

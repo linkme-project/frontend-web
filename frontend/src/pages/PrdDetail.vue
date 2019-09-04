@@ -132,7 +132,9 @@ export default {
     'prd-header': productHeader,
     'spinner': Spinner
   },
-  created: function () {},
+  mounted () {
+    scrollTo(0, 0)
+  },
   methods: {
     ajaxTest: function () {
       console.log('나오냐')

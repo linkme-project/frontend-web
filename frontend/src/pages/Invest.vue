@@ -143,6 +143,9 @@ export default {
     'custom-bottom-nav': bottomNavigation,
     'custom-footer': footer
   },
+  mounted () {
+    scrollTo(0, 0)
+  },
   data: () => ({
     settings: [],
     items: [

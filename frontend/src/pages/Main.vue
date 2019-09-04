@@ -246,6 +246,7 @@ export default {
     'bottom-navigator': bottomNav
   },
   mounted () {
+    scrollTo(0, 0)
     if (this.$store.state.openDialog) {
       this.openDialog('로그인 성공', '임근학님 환영합니다')
       this.$store.commit('close')

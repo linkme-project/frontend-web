@@ -65,7 +65,8 @@ export default {
   },
   created: function () {
   },
-  methods: {
+  mounted () {
+    scrollTo(0, 0)
   }
 
   // ajax 개념 vue 문법을 활용하여 controller로 접

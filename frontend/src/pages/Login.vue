@@ -175,6 +175,7 @@ export default {
     }
   },
   mounted () {
+    scrollTo(0, 0)
     if (this.$store.state.useFido) {
       this.openFidoDialog('지문으로 인증하세요')
     }

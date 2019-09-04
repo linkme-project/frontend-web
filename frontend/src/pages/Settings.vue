@@ -80,6 +80,7 @@ export default {
   },
   mounted () {
     this.fido = this.$store.state.useFido
+    scrollTo(0, 0)
   },
   methods: {
     setFido () {
