@@ -45,7 +45,7 @@
             width="100%"
             height="45px"
             style="margin-top: 12px; font-size: 20px; font-weight: 400;"
-            v-on:click="invest()"
+            v-on:click="openFidoDialog"
           >지금 투자하기</v-btn>
         </div>
       </div>
@@ -72,6 +72,32 @@
         </v-card-actions>
       </v-card>
     </v-dialog>
+    <div style="display:flex;">
+      <v-dialog
+        v-model="fidoDialog"
+        max-width="300"
+        style="height: 500px;"
+      >
+        <v-card>
+          <v-card-title class="headline" style="justify-content: center; margin-bottom: 12px;">상품 구매</v-card-title>
+          <div style="width: 100%; text-align: center;">
+            <img src="static/images/fingerprint.png" style="width: 50px; margin-bottom: 8px;" />
+          </div>
+          <v-card-text style="text-align: center; ">
+            {{ fidoLoginMessage }}
+          </v-card-text>
+          <v-card-actions style="display:flex; justify-content: center;">
+            <v-btn
+              color="green darken-1"
+              text
+              @click="invest"
+            >
+              인증하기
+            </v-btn>
+          </v-card-actions>
+        </v-card>
+      </v-dialog>
+    </div>
     <prd-footer />
   </div>
 </template>
@@ -96,7 +122,9 @@ export default {
       spinnerKey: 'offSpinner',
       title: '',
       message: '',
-      dialog: false
+      dialog: false,
+      fidoLoginMessage: '',
+      fidoDialog: false
     }
   },
   components: {
@@ -118,13 +146,6 @@ export default {
         })
     },
     invest: function () {
-      if (!this.$store.state.isLogin) {
-        this.openDialog('구매 실패', '로그인이 필요한 서비스 입니다')
-        setTimeout(() => {
-          this.$router.push('/sign-in-or-sign-up')
-        }, 1000)
-        return
-      }
       // this.$router.push({path: '/product-invest'})
       if (window.LinkMeApp) {
         window.LinkMeApp.authFido()
@@ -144,6 +165,17 @@ export default {
       this.title = title
       this.message = message
       this.dialog = true
+    },
+    openFidoDialog () {
+      if (!this.$store.state.isLogin) {
+        this.openDialog('구매 실패', '로그인이 필요한 서비스 입니다')
+        setTimeout(() => {
+          this.$router.push('/sign-in-or-sign-up')
+        }, 1000)
+        return
+      }
+      this.fidoLoginMessage = '지문으로 인증하세요'
+      this.fidoDialog = true
     }
   }
   // ajax 개념 vue 문법을 활용하여 controller로 접
