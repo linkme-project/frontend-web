@@ -105,6 +105,9 @@ export default {
       this.$router.push('/sign-in-or-sign-up')
     }
     this.tab = 'funding'
+    if (this.$store.state.buyProduct) {
+      this.isPayments = true
+    }
   },
   methods: {
     logout () {

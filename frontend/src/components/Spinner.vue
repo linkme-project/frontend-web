@@ -46,7 +46,7 @@ export default {
   top:0;
   z-index:9000;
   width: 100%;
-  height: 100%;
+  height: 200%;
   background-color:#000;
   opacity: 0.5;
 }

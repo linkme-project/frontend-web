@@ -1,40 +1,8 @@
 
 <template>
   <div class="wrapper">
-    <spinner :isShow="isSpinnerShow" :key="spinnerKey"/>
     <prd-header message="약 7,600억원 추정 규모의 위폐감별기 시장을 잡아라! | 링크미 투자 - 크라우드펀딩" to="/"/>
-    <div style="margin-bottom: 26px;">
-      <img src="static/images/detail-1.png" style="width: 100%;" class="eachFundImg" id="adver" />
-    </div>
     <div class="product-content">
-      <div style="margin-bottom: 12px;">
-        <div style="margin-bottom: 6px;">
-          <label style="font-size: 18px; color: #1d2129;">
-            <strong>28,294,840원 달성</strong>
-          </label>
-          <span style="font-size: 13px; color: #90949c">목표금액 50,001,080원 <b>57%</b></span>
-        </div>
-        <label style="font-size: 18px; color: #1d2129;"><strong>16일 남음</strong></label> <span style="font-size: 13px; color: #90949c">2019.09.20 15:00 마감</span> <br />
-        <div style="margin-top: 12px;">
-          <span style="font-size: 10px; border: 1px solid #eee; margin-right: 4px; padding: 2px;">증액예정</span>
-          <span style="font-size: 12px; color: #90949c">모집상황에 따라 최대 200,000,984원으로 증액 예정입니다.</span>
-        </div>
-      </div>
-      <v-divider />
-      <div style="margin-top: 18px; font-size: 12px; margin-bottom: 4px;">
-      매력도 평가
-      </div>
-      <div style="margin-bottom: 8px;">
-        <img src="static/images/detail-2.png" width="80%"/>
-      </div>
-      <v-divider />
-      <div style="margin-top: 8px;">
-        <img src="static/images/detail-4.png" width="100%"/>
-      </div>
-      <v-divider />
-      <div style="margin-top: 8px;">
-        <img src="static/images/detail-5.png" width="100%"/>
-      </div>
       <div id="prdDetailDayInfo">
         <div class="my-2" id="btnFunding">
           <v-btn
@@ -46,7 +14,7 @@
             height="45px"
             style="margin-top: 12px; font-size: 20px; font-weight: 400;"
             v-on:click="invest()"
-          >지금 투자하기</v-btn>
+          >이 조건으로 투자하기</v-btn>
         </div>
       </div>
     </div>
@@ -58,31 +26,21 @@
 import axios from 'axios'
 import footer from '../components/FooterInPage'
 import productHeader from '../components/PrdHeader'
-import Spinner from '@/components/Spinner'
 
 // 데이터 렌더링 가져오기
 export default {
   name: 'HelloWorld',
   data () {
     return {
-      imageSlide: [
-        '<img src="images/와디즈 캡쳐_1.png" class="eachFundImg" id="adver"/>',
-        '<img src="images/와디즈 캡쳐_2.png" class="eachFundImg" id="adver"/>',
-        '<img src="images/와디즈 캡쳐_3.png" class="eachFundImg" id="adver"/>'
-      ],
-      isSpinnerShow: false,
-      spinnerKey: 'offSpinner'
     }
   },
   components: {
     'prd-footer': footer,
-    'prd-header': productHeader,
-    'spinner': Spinner
+    'prd-header': productHeader
   },
   created: function () {},
   methods: {
     ajaxTest: function () {
-      console.log('나오냐')
       axios
         .get('/vueList')
         .then(res => {
@@ -93,23 +51,13 @@ export default {
         })
     },
     invest: function () {
-      // this.$router.push({path: '/product-invest'})
-      if (window.LinkMeApp) {
-        window.LinkMeApp.authFido()
-      }
-
-      this.$store.commit('buy')
+      window.LinkMeApp.authFido()
       this.$store.commit('open2')
       setTimeout(() => {
-        this.isSpinnerShow = !this.isSpinnerShow
-        this.spinnerKey = 'showSpinner'
-        setTimeout(() => {
-          this.$router.push('/')
-        }, 1500)
-      }, 500)
+        this.$router.push('/')
+      }, 1500)
     }
   }
-  // ajax 개념 vue 문법을 활용하여 controller로 접
 }
 </script>
 

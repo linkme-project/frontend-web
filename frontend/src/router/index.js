@@ -12,6 +12,7 @@ import NotProvided from '@/pages/NotProvided'
 import Invest from '@/pages/Invest'
 
 import PrdDetail from '@/pages/PrdDetail'
+import PrdInvest from '@/pages/PrdInvest'
 import PrdDetail2 from '@/pages/PrdDetail-2'
 import PrdSearch from '@/pages/PrdSearch'
 import PrdList from '@/pages/PrdList'
@@ -93,6 +94,10 @@ export default new Router({
     {
       path: '/my-invest',
       component: MyInvest
+    },
+    {
+      path: '/product-invest',
+      component: PrdInvest
     }
   ]
 })

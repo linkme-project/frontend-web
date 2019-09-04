@@ -250,6 +250,10 @@ export default {
       this.openDialog('로그인 성공', '임근학님 환영합니다')
       this.$store.commit('close')
     }
+    if (this.$store.state.openDialog2) {
+      this.openDialog('구매 성공', '상품 구매가 정상 처리되었습니다')
+      this.$store.commit('close2')
+    }
   },
   methods: {
     ajaxTest: function () {
