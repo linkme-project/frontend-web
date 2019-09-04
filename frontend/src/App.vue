@@ -3,26 +3,6 @@
     <!-- <custom-alert /> -->
     <custom-header />
     <router-view style="margin-top: 48px;"/>
-    <v-dialog
-      v-model="alert"
-      max-width="290"
-    >
-      <v-card>
-        <v-card-text>
-          {{ message }}
-        </v-card-text>
-
-        <v-card-actions style="justify-content: center;">
-          <v-btn
-            color="green darken-1"
-            text
-            @click="moveToHome"
-          >
-            확인
-          </v-btn>
-        </v-card-actions>
-      </v-card>
-    </v-dialog>
   </div>
 </template>
 
@@ -30,8 +10,6 @@
 import footer from '@/components/FooterInPage'
 import header from '@/components/Header'
 // import alert from '@/components/Alert'
-import store from '@/plugins/store'
-import router from '@/router'
 
 export default window.App = {
   name: 'App',
@@ -50,27 +28,25 @@ export default window.App = {
     onFidoAuth (type, result) {
       if (type === 0) { // reg
         if (result) {
-          window.App.data().message = '지문 등록이 완료되었습니다'
-          window.App.data().alert = true
+          // this.message = '지문 등록이 완료되었습니다'
+          // this.alert = true
+          return true
         } else {
-          window.App.data().message = '지문 등록을 실패하였습니다'
-          window.App.data().alert = true
+          // this.message = '지문 등록을 실패하였습니다'
+          // this.alert = true
+          return false
         }
       } else if (type === 1) { // auth
-        window.App.data().alert = true
-        window.App.data().message = '로그인 하였습니다'
-        setTimeout(() => {
-          store.commit('login')
-          router.push('/')
-        }, 2000)
+        // this.alert = true
+        // this.message = '로그인 하였습니다'
+        // store.commit('login')
+        // setTimeout(() => {
+        //  router.push('/')
+        // }, 2000)
+        return true
       } else {
         //
       }
-    },
-    moveToHome () {
-      store.commit('login')
-      router.push('/')
-      this.alert = false
     }
   }
 }

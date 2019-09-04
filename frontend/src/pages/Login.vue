@@ -108,7 +108,7 @@
         max-width="290"
       >
         <v-card>
-          <v-card-title class="headline" style="justify-content: center;">로그인 실패</v-card-title>
+          <v-card-title class="headline" style="justify-content: center;">{{ loginTitle }}</v-card-title>
 
           <v-card-text>
             {{ loginMessage }}
@@ -166,6 +166,7 @@ export default {
       userId: '',
       password: '',
       loginMessage: '',
+      loginTitle: '',
       fidoLoginMessage: '',
       dialog: false,
       fidoDialog: false,
@@ -186,11 +187,11 @@ export default {
     },
     login () {
       if (this.userId === '') {
-        this.openDialog('아이디를 입력해주세요')
+        this.openDialog('로그인 실패', '아이디를 입력해주세요')
         return
       }
       if (this.password === '') {
-        this.openDialog('패스워드를 입력해주세요')
+        this.openDialog('로그인 실패', '패스워드를 입력해주세요')
         return
       }
 
@@ -204,7 +205,8 @@ export default {
         }, 1000)
       })
     },
-    openDialog (message) {
+    openDialog (title, message) {
+      this.loginTitle = title
       this.loginMessage = message
       this.dialog = true
     },
@@ -214,7 +216,12 @@ export default {
     },
     fidoAuth () {
       if (window.LinkMeApp) {
-        window.LinkMeApp.authFido()
+        if (window.LinkMeApp.authFido()) {
+          this.openDialog('로그인 성공', '임근학님 환영합니다')
+          setTimeout(() => {
+            this.$router.push('/')
+          }, 1500)
+        }
       }
       this.fidoDialog = false
     }
