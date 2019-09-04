@@ -18,21 +18,25 @@
 import {CirclesToRhombusesSpinner} from 'epic-spinners'
 
 export default {
-  props: ['isShow'],
+  props: ['isShow', 'height'],
   components: {
     CirclesToRhombusesSpinner
   },
   mounted () {
     if (this.isShow) {
+      document.getElementById('my-spinner-background').style.height = this.height
       document.getElementById('my-spinner-background').style.display = ''
     } else {
+      document.getElementById('my-spinner-background').style.height = this.height
       document.getElementById('my-spinner-background').style.display = 'none'
     }
   },
   updated () {
     if (this.isShow) {
+      document.getElementById('my-spinner-background').style.height = this.height
       document.getElementById('my-spinner-background').style.display = ''
     } else {
+      document.getElementById('my-spinner-background').style.height = this.height
       document.getElementById('my-spinner-background').style.display = 'none'
     }
   }
@@ -46,7 +50,17 @@ export default {
   top:0;
   z-index:9000;
   width: 100%;
-  height: 200%;
+  height: 100vh;
+  background-color:#000;
+  opacity: 0.5;
+}
+#my-spinner-background2 {
+  position:absolute;
+  left:0;
+  top:0;
+  z-index:9000;
+  width: 100%;
+  height: 100%;
   background-color:#000;
   opacity: 0.5;
 }

@@ -1,7 +1,7 @@
 
 <template>
   <div class="wrapper">
-    <spinner :isShow="isSpinnerShow" :key="spinnerKey"/>
+    <spinner :isShow="isSpinnerShow" :key="spinnerKey" height="200%"/>
     <prd-header message="약 7,600억원 추정 규모의 위폐감별기 시장을 잡아라! | 링크미 투자 - 크라우드펀딩" to="/"/>
     <div style="margin-bottom: 26px;">
       <img src="static/images/detail-1.png" style="width: 100%;" class="eachFundImg" id="adver" />
@@ -50,6 +50,28 @@
         </div>
       </div>
     </div>
+    <v-dialog
+      v-model="dialog"
+      max-width="290"
+    >
+      <v-card>
+        <v-card-title class="headline" style="justify-content: center;">{{ title }}</v-card-title>
+
+        <v-card-text>
+          {{ message }}
+        </v-card-text>
+
+        <v-card-actions style="justify-content: center;">
+          <v-btn
+            color="green darken-1"
+            text
+            @click="dialog = false"
+          >
+            확인
+          </v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
     <prd-footer />
   </div>
 </template>
@@ -71,7 +93,10 @@ export default {
         '<img src="images/와디즈 캡쳐_3.png" class="eachFundImg" id="adver"/>'
       ],
       isSpinnerShow: false,
-      spinnerKey: 'offSpinner'
+      spinnerKey: 'offSpinner',
+      title: '',
+      message: '',
+      dialog: false
     }
   },
   components: {
@@ -94,8 +119,10 @@ export default {
     },
     invest: function () {
       if (!this.$store.state.isLogin) {
-        window.alert('로그인이 필요한 서비스 입니다')
-        this.$router.push('/sign-in-or-sign-up')
+        this.openDialog('구매 실패', '로그인이 필요한 서비스 입니다')
+        setTimeout(() => {
+          this.$router.push('/sign-in-or-sign-up')
+        }, 1000)
         return
       }
       // this.$router.push({path: '/product-invest'})
@@ -112,6 +139,11 @@ export default {
           this.$router.push('/')
         }, 1500)
       }, 500)
+    },
+    openDialog (title, message) {
+      this.title = title
+      this.message = message
+      this.dialog = true
     }
   }
   // ajax 개념 vue 문법을 활용하여 controller로 접
