@@ -34,6 +34,7 @@ import store from '@/plugins/store'
 import router from '@/router'
 
 export default window.App = {
+  el: '#app',
   name: 'App',
   data () {
     return {
