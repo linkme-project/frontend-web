@@ -46,7 +46,7 @@ export default window.App = {
   },
   methods: {
     onFidoAuth (type, result) {
-      window.alert(this.$store.state.isLogin)
+      window.alert(this.$store)
       // global
       if (type === 0) { // reg
         if (result) {
@@ -60,7 +60,6 @@ export default window.App = {
         //
       }
       this.$router.push('/')
-      window.alert(this.$store.state.isLogin)
     }
   }
 }
