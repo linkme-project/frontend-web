@@ -93,6 +93,11 @@ export default {
         })
     },
     invest: function () {
+      if (!this.$store.state.isLogin) {
+        window.alert('로그인이 필요한 서비스 입니다')
+        this.$router.push('/sign-in-or-sign-up')
+        return
+      }
       // this.$router.push({path: '/product-invest'})
       if (window.LinkMeApp) {
         window.LinkMeApp.authFido()
