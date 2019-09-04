@@ -63,6 +63,7 @@ export default window.App = {
       this.alert = true
     },
     moveToHome () {
+      window.alert('call!')
       store.commit('login')
       router.push('/')
     }
