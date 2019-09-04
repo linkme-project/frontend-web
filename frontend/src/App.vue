@@ -45,7 +45,6 @@ export default window.App = {
         // setTimeout(() => {
         //  router.push('/')
         // }, 2000)
-        
         return true
       } else {
         //
