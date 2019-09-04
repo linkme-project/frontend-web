@@ -16,7 +16,7 @@
             <v-list-item-title class="list-title">지문 인증 설정</v-list-item-title>
           </v-list-item-content>
           <v-list-item-avatar>
-            <v-switch></v-switch>
+            <v-checkbox v-model="fido" @change="setFido"></v-checkbox>
           </v-list-item-avatar>
         </v-list-item>
         <v-divider></v-divider>
@@ -75,6 +75,19 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
+      fido: true
+    }
+  },
+  mounted () {
+    this.fido = this.$store.state.useFido
+  },
+  methods: {
+    setFido () {
+      if (this.fido) {
+        this.$store.commit('turnOnFido')
+      } else {
+        this.$store.commit('turnOffFido')
+      }
     }
   }
 }

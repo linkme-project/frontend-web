@@ -69,7 +69,6 @@
             width="100%"
             min-height="48px"
             class="social-btn"
-            @click="regFido"
           >
             카카오
           </v-btn>
@@ -79,7 +78,6 @@
             width="100%"
             min-height="48px"
             class="social-btn"
-            @click="authFido"
           >
             네이버
           </v-btn>
@@ -126,6 +124,29 @@
           </v-card-actions>
         </v-card>
       </v-dialog>
+      <v-dialog
+        v-model="fidoDialog"
+        max-width="300"
+        style="height: 500px;"
+      >
+        <v-card>
+          <v-card-title class="headline" style="justify-content: center; margin-bottom: 12px;">로그인</v-card-title>
+
+          <img src="static/images/fingerprint.png" style="width: 50px; margin-bottom: 8px;" />
+          <v-card-text>
+            {{ fidoLoginMessage }}
+          </v-card-text>
+          <v-card-actions style="justify-content: center;">
+            <v-btn
+              color="green darken-1"
+              text
+              @click="fidoAuth"
+            >
+              인증하기
+            </v-btn>
+          </v-card-actions>
+        </v-card>
+      </v-dialog>
       <custom-footer msg="아직 링크미 계정이 없나요?" link="/sign-up" link-text="회원가입" />
     </div>
 </template>
@@ -144,17 +165,21 @@ export default {
       userId: '',
       password: '',
       loginMessage: '',
+      fidoLoginMessage: '',
       dialog: false,
+      fidoDialog: false,
       isSpinnerShow: false,
       spinnerKey: 'offSpinner'
+    }
+  },
+  mounted () {
+    if (this.$store.state.useFido) {
+      this.openFidoDialog('지문으로 인증하세요')
     }
   },
   methods: {
     regFido () {
       window.LinkMeApp.regFido()
-    },
-    authFido () {
-      window.LinkMeApp.authFido()
     },
     login () {
       if (this.userId === '') {
@@ -179,6 +204,16 @@ export default {
     openDialog (message) {
       this.loginMessage = message
       this.dialog = true
+    },
+    openFidoDialog (message) {
+      this.fidoLoginMessage = message
+      this.fidoDialog = true
+    },
+    fidoAuth () {
+      if (window.LinkMeApp) {
+        window.LinkMeApp.authFido()
+      }
+      this.fidoDialog = false
     }
   }
 }

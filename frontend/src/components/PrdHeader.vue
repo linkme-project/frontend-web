@@ -9,7 +9,7 @@
       <v-icon>keyboard_arrow_left</v-icon>
     </v-btn>
 
-    <v-spacer><div class="prd-header" style="text-align: center;">{{ message }}</div></v-spacer>
+    <v-spacer><div class="prd-header" style="text-align: center; font-weight: 600">{{ message }}</div></v-spacer>
     <v-btn icon to="/">
       <v-icon>home</v-icon>
     </v-btn>

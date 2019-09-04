@@ -16,6 +16,7 @@ import PrdDetail2 from '@/pages/PrdDetail-2'
 import PrdSearch from '@/pages/PrdSearch'
 import PrdList from '@/pages/PrdList'
 import MyFundInfo from '@/pages/MyFundInfo'
+import MyInvest from '@/pages/MyInvest'
 
 Vue.use(Router)
 
@@ -88,6 +89,10 @@ export default new Router({
     {
       path: '/product-detail-2',
       component: PrdDetail2
+    },
+    {
+      path: '/my-invest',
+      component: MyInvest
     }
   ]
 })

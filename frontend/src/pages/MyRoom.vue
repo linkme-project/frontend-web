@@ -27,7 +27,7 @@
         </div>
       </div>
       <div class="user-info-tab">
-        <div class="tab-item">
+        <div class="tab-item" @click="moveTo">
           <v-icon x-large style="margin-bottom: 5px;">trending_up</v-icon> <br />
           나의 투자
         </div>
@@ -141,6 +141,9 @@ export default {
           this.$router.push('/')
         }, 1000)
       })
+    },
+    moveTo () {
+      this.$router.push('/my-invest')
     }
   }
 }

@@ -21,7 +21,12 @@ export default window.App = {
   methods: {
     onFidoAuth (type, result) {
       // global
-      window.alert(type + ' ' + result)
+      this.$nextTick(() => {
+        setTimeout(() => {
+          this.$store.commit('login')
+          this.$router.push('/')
+        }, 1000)
+      })
     }
   }
 }

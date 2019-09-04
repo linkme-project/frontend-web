@@ -6,7 +6,7 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     isLogin: false,
-    availableFido: false,
+    useFido: false,
     userDictionary: []
   },
   mutations: {
@@ -17,10 +17,10 @@ export default new Vuex.Store({
       state.isLogin = false
     },
     turnOnFido (state) {
-      state.availableFido = true
+      state.useFido = true
     },
     turnOffFido (state) {
-      state.availableFido = false
+      state.useFido = false
     }
   }
 })
