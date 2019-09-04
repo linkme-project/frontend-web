@@ -34,7 +34,6 @@ import store from '@/plugins/store'
 import router from '@/router'
 
 export default window.App = {
-  el: '#app',
   name: 'App',
   data () {
     return {
@@ -51,15 +50,15 @@ export default window.App = {
     onFidoAuth (type, result) {
       if (type === 0) { // reg
         if (result) {
-          this.message = '지문 등록이 완료되었습니다'
-          this.alert = true
+          window.App.data().message = '지문 등록이 완료되었습니다'
+          window.App.data().alert = true
         } else {
-          this.message = '지문 등록을 실패하였습니다'
-          this.alert = true
+          window.App.data().message = '지문 등록을 실패하였습니다'
+          window.App.data().alert = true
         }
       } else if (type === 1) { // auth
-        this.alert = true
-        this.message = '로그인 하였습니다'
+        window.App.data().alert = true
+        window.App.data().message = '로그인 하였습니다'
         setTimeout(() => {
           store.commit('login')
           router.push('/')
