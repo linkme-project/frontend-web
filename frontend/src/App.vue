@@ -31,7 +31,7 @@ import footer from '@/components/FooterInPage'
 import header from '@/components/Header'
 // import alert from '@/components/Alert'
 import store from '@/plugins/store'
-import router from '@/plugins/router'
+import router from '@/router'
 
 export default window.App = {
   name: 'App',
@@ -51,7 +51,7 @@ export default window.App = {
       window.alert(store)
       store.commit('login')
       router.push('/')
-      
+
       // global
       if (type === 0) { // reg
         if (result) {
