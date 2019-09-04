@@ -254,6 +254,10 @@ export default {
       this.openDialog('구매 성공', '상품 구매가 정상 처리되었습니다')
       this.$store.commit('close2')
     }
+    if (this.$store.state.openDialog3) {
+      this.openDialog('로그아웃', '로그아웃 처리되었습니다')
+      this.$store.commit('close3')
+    }
   },
   methods: {
     ajaxTest: function () {

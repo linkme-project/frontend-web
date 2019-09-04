@@ -8,8 +8,9 @@ export default new Vuex.Store({
     isLogin: false,
     useFido: false,
     userDictionary: [],
-    openDialog: false,
-    openDialog2: false,
+    openDialog: false, // login
+    openDialog2: false, // parchase
+    openDialog3: false, // logout
     buyProduct: false
   },
   mutations: {
@@ -36,6 +37,12 @@ export default new Vuex.Store({
     },
     close2 (state) {
       state.openDialog2 = false
+    },
+    open3 (state) {
+      state.openDialog3 = true
+    },
+    close3 (state) {
+      state.openDialog3 = false
     },
     buy (state) {
       state.buyProduct = true
