@@ -267,7 +267,7 @@ export default {
       this.loginTitle = title
       this.loginMessage = message
       this.dialog = true
-    },
+    }
   }
 }
 </script>
