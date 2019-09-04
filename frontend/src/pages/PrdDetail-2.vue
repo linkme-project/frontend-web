@@ -1,7 +1,7 @@
 
 <template>
   <div class="wrapper">
-    <prd-header message="[연 13% 6개월] N사 실검의 주인공 푸드스미스"/>
+    <prd-header message="[연 13% 6개월] N사 실검의 주인공 푸드스미스" to="/"/>
     <div style="margin-bottom: 26px;">
       <img src="static/images/detail-6.png" style="width: 100%;" class="eachFundImg" id="adver" />
     </div>

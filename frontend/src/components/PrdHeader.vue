@@ -5,12 +5,12 @@
     dense
     flat
   >
-    <v-btn icon to="/">
+    <v-btn icon :to="to">
       <v-icon>keyboard_arrow_left</v-icon>
     </v-btn>
 
     <v-spacer><div class="prd-header" style="text-align: center; font-weight: 600">{{ message }}</div></v-spacer>
-    <v-btn icon to="/">
+    <v-btn icon :to="to">
       <v-icon>home</v-icon>
     </v-btn>
   </v-app-bar>
@@ -18,7 +18,7 @@
 
 <script>
 export default {
-  props: ['message'],
+  props: ['message', 'to'],
   data () {
     return {
       list: []

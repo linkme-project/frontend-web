@@ -31,15 +31,15 @@
           <v-icon x-large style="margin-bottom: 5px;">trending_up</v-icon> <br />
           나의 투자
         </div>
-        <div class="tab-item">
+        <div class="tab-item" @click="notProvided">
           <v-icon x-large style="margin-bottom: 5px;">card_giftcard</v-icon> <br />
           나의 리워드
         </div>
-        <div class="tab-item">
+        <div class="tab-item" @click="notProvided">
           <v-icon x-large style="margin-bottom: 5px;">person_add</v-icon> <br />
           팔로잉
         </div>
-        <div class="tab-item">
+        <div class="tab-item" @click="notProvided">
           <v-icon x-large style="margin-bottom: 5px;">favorite_border</v-icon> <br />
           좋아한
         </div>
@@ -144,6 +144,9 @@ export default {
     },
     moveTo () {
       this.$router.push('/my-invest')
+    },
+    notProvided () {
+      this.$router.push('/not-provided')
     }
   }
 }

@@ -9,6 +9,7 @@
         보다 나은 서비스 제공을 위하여 페이지 준비중에 있습니다.<br />
         빠른 시일내에 준비하여 찾아뵙겠습니다.
       </p>
+      <div class="back" @click="moveBack">돌아가기</div>
       <custom-bottom-nav />
     </div>
 </template>
@@ -23,7 +24,11 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
-      msg: '테스트 페이지다 이 새끼야'
+    }
+  },
+  methods: {
+    moveBack () {
+      this.$router.go(-1)
     }
   }
 }
@@ -44,5 +49,11 @@ export default {
 .sign-in-desc {
   font-size: 14px;
   line-height: 24px;
+  margin-bottom: 20px;
+}
+.back {
+  color: rgb(0, 162, 162);
+  font-weight: 600;
+  text-decoration: underline;
 }
 </style>

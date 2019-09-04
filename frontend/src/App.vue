@@ -16,7 +16,7 @@
           <v-btn
             color="green darken-1"
             text
-            @click="alert = false"
+            @click="moveToHome"
           >
             확인
           </v-btn>
@@ -52,19 +52,19 @@ export default window.App = {
       if (type === 0) { // reg
         if (result) {
           this.message = '지문 등록이 완료되었습니다'
-          this.alert = true
         } else {
           this.message = '지문 등록을 실패하였습니다'
-          this.alert = true
         }
       } else if (type === 1) { // auth
         this.message = '로그인 하였습니다'
-        this.alert = true
-        store.commit('login')
-        router.push('/')
       } else {
         //
       }
+      this.alert = true
+    },
+    moveToHome () {
+      store.commit('login')
+      router.push('/')
     }
   }
 }

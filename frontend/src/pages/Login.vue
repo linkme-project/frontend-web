@@ -96,6 +96,7 @@
             width="100%"
             min-height="48px"
             class="social-btn"
+            @click="dereg"
           >
             트위터
           </v-btn>
@@ -178,8 +179,10 @@ export default {
     }
   },
   methods: {
-    regFido () {
-      window.LinkMeApp.regFido()
+    dereg () {
+      if (window.LinkMeApp) {
+        window.LinkMeApp.deregFido()
+      }
     },
     login () {
       if (this.userId === '') {

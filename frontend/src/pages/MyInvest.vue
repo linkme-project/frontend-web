@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <inner-header message="와디즈 - 펀딩내역" />
+    <inner-header message="와디즈 - 펀딩내역" to="/my-room"/>
     <div class="title">
       나의 투자
     </div>
@@ -9,10 +9,10 @@
       fixed-tabs
       height="40px"
     >
-      <v-tab value="funding" to="/not-provided">
+      <v-tab value="funding">
         펀딩 내역
       </v-tab>
-      <v-tab value="invest-info">
+      <v-tab value="invest-info" to="/not-provided">
         내 투자 정보
       </v-tab>
       <v-tab value="account-info" to="/not-provided">

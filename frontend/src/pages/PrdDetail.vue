@@ -1,7 +1,7 @@
 
 <template>
   <div class="wrapper">
-    <prd-header message="약 7,600억원 추정 규모의 위폐감별기 시장을 잡아라! | 링크미 투자 - 크라우드펀딩"/>
+    <prd-header message="약 7,600억원 추정 규모의 위폐감별기 시장을 잡아라! | 링크미 투자 - 크라우드펀딩" to="/"/>
     <div style="margin-bottom: 26px;">
       <img src="static/images/detail-1.png" style="width: 100%;" class="eachFundImg" id="adver" />
     </div>
