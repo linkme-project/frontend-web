@@ -216,12 +216,11 @@ export default {
     },
     fidoAuth () {
       if (window.LinkMeApp) {
-        if (window.LinkMeApp.authFido()) {
-          this.openDialog('로그인 성공', '임근학님 환영합니다')
-          setTimeout(() => {
-            this.$router.push('/')
-          }, 1500)
-        }
+        window.LinkMeApp.authFido()
+        this.openDialog('로그인 성공', '임근학님 환영합니다')
+        setTimeout(() => {
+          this.$router.push('/')
+        }, 1500)
       }
       this.fidoDialog = false
     }
