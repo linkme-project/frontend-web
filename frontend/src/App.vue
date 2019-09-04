@@ -46,6 +46,7 @@ export default window.App = {
   },
   methods: {
     onFidoAuth (type, result) {
+      window.alert(this.$store.state.isLogin)
       // global
       if (type === 0) { // reg
         if (result) {
