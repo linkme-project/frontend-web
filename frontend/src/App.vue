@@ -48,7 +48,7 @@ export default window.App = {
   },
   methods: {
     onFidoAuth (type, result) {
-      // global
+      this.alert = true
       if (type === 0) { // reg
         if (result) {
           this.message = '지문 등록이 완료되었습니다'
